@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright 2011 Peter Kuterna
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+         http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:swipeytabs="http://schemas.android.com/apk/res/com.crossconnect.views"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <LinearLayout android:id="@+id/header" android:layout_height="36sp" android:layout_width="fill_parent" android:background="@color/dg_black">
+        <LinearLayout android:id="@+id/header_box" android:layout_height="fill_parent" android:layout_width="wrap_content" android:orientation="vertical"> 
+            <TextView android:id="@+id/header_title" android:text="Notes" android:layout_height="wrap_content" android:layout_width="wrap_content" android:textColor="@color/dg_text_gray" android:textSize="18sp" android:paddingTop="3dp"></TextView>
+            <ImageView android:id="@+id/floating_down" android:background="@android:drawable/arrow_down_float" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </LinearLayout>> 
+        <LinearLayout android:id="@+id/linearLayout2" android:layout_height="fill_parent" android:layout_width="fill_parent" android:gravity="right">
+<!--             <View android:layout_height="fill_parent" android:layout_width="1dp" android:background="@drawable/gradient_black_white_black" android:layout_marginLeft="1dp" android:layout_marginRight="1dp"/>
+            <ImageButton style="@style/TitleIcon" android:background="@android:drawable/ic_menu_slideshow" android:id="@+id/menu_button_translations"></ImageButton>
+            <View android:layout_height="fill_parent" android:layout_width="1dp" android:background="@drawable/gradient_black_white_black" android:layout_marginLeft="1dp" android:layout_marginRight="1dp"/>
+            <ImageButton style="@style/TitleIcon" android:background="@drawable/menu_windows" android:id="@+id/menu_button_windows"></ImageButton>
+            <View android:layout_height="fill_parent" android:layout_width="1dp" android:background="@drawable/gradient_black_white_black" android:layout_marginLeft="1dp" android:layout_marginRight="1dp"/>
+            <ImageButton style="@style/TitleIcon" android:id="@+id/menu_button_star" android:background="@android:drawable/ic_menu_preferences"></ImageButton>
+            <ImageButton style="@style/TitleIcon" android:background="@drawable/ic_launcher" android:id="@+id/menu_button_browse_resources"/>
+            <ImageButton style="@style/TitleIcon" android:background="@android:drawable/ic_menu_myplaces" android:id="@+id/menu_button_churches"></ImageButton>
+            <ImageButton style="@style/TitleIcon" android:background="@android:drawable/ic_menu_sort_by_size" android:id="@+id/menu_button_browse_audio"/>
+            <ImageButton style="@style/TitleIcon" android:background="@drawable/ic_launcher" android:id="@+id/menu_button_audio"></ImageButton>
+            <ImageButton style="@style/TitleIcon" android:background="@android:drawable/ic_menu_sort_by_size" android:id="@+id/menu_button_notes"></ImageButton>
+ -->            <ImageButton android:layout_height="36sp" android:layout_width="36sp" android:background="@android:drawable/ic_menu_edit" android:id="@+id/menu_button_notes_lock"></ImageButton>
+        </LinearLayout>
+    </LinearLayout>
+    <View android:layout_width="fill_parent" android:layout_height="2sp" android:background="@color/dg_red"/>
+    
+    <fragment android:name="com.crossconnect.activity.notemanager.PersonalNotesEditorFragment" android:id="@+id/editor" android:layout_weight="1" android:layout_width="fill_parent" android:layout_height="fill_parent"/>     
+</LinearLayout>

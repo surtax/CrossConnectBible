@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Main View and master controller for the main views: ie. Bible Text, Sermon, Audio Bible -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+    <LinearLayout android:id="@+id/header" android:layout_height="36sp" android:layout_width="fill_parent" android:background="@color/dg_black">
+        <LinearLayout android:id="@+id/header_box" android:layout_height="fill_parent" android:layout_width="wrap_content" android:orientation="vertical"> 
+            <TextView android:id="@+id/header_title" android:text="Bible" android:layout_height="wrap_content" android:layout_width="wrap_content" android:textColor="@color/dg_text_gray" android:textSize="18sp" android:paddingTop="3dp"></TextView>
+        </LinearLayout>> 
+        <LinearLayout android:id="@+id/linearLayout2" android:layout_height="fill_parent" android:layout_width="fill_parent" android:gravity="right">
+            <View android:layout_height="fill_parent" android:layout_width="1dp" android:background="@drawable/gradient_black_white_black" android:layout_marginLeft="1dp" android:layout_marginRight="1dp"/>
+            <ImageButton style="@style/TitleIcon" android:background="@android:drawable/ic_menu_slideshow" android:id="@+id/menu_button_translations"></ImageButton>
+        </LinearLayout>
+    </LinearLayout>
+    <View android:layout_width="fill_parent" android:layout_height="2sp" android:background="@color/dg_red"/>
+    <LinearLayout android:id="@+id/home_feature_container" android:layout_weight="1" android:layout_height="wrap_content" android:layout_width="fill_parent" android:background="@color/solid_white">
+        <ListView android:layout_height="fill_parent"
+            android:layout_width="fill_parent" android:id="@+id/android:list" />
+        <!-- Here is the view to show if the list is empty -->
+        <TextView android:id="@+id/empty" android:layout_width="fill_parent"
+            android:layout_height="fill_parent" android:text="@string/no_churches" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="25sp" android:gravity="center_horizontal" android:paddingBottom="5sp" android:id="@+id/icon_tray_container" android:background="@color/dg_gray">
+        <ImageButton android:background="@drawable/sermon" android:id="@+id/column_icon_sermon" android:focusableInTouchMode="true" android:focusable="true" android:layout_width="20sp" android:layout_height="20sp" android:layout_marginLeft="20sp" android:layout_marginRight="20sp"></ImageButton>
+        <ImageButton android:background="@drawable/bible_text" android:id="@+id/column_icon_bible_text" android:focusableInTouchMode="true" android:focusable="true" android:layout_width="20sp" android:layout_height="20sp" android:layout_marginLeft="20sp" android:layout_marginRight="20sp"></ImageButton>
+        <ImageButton android:background="@drawable/audio" android:id="@+id/column_icon_audio_bible" android:focusableInTouchMode="true" android:focusable="true" android:layout_width="20sp" android:layout_height="20sp" android:layout_marginLeft="20sp" android:layout_marginRight="20sp"></ImageButton>
+        <ImageButton android:background="@drawable/sermon" android:id="@+id/column_icon_notes" android:focusableInTouchMode="true" android:focusable="true" android:layout_width="20sp" android:layout_height="20sp" android:layout_marginLeft="20sp" android:layout_marginRight="20sp"></ImageButton>
+    </LinearLayout>
+</LinearLayout>

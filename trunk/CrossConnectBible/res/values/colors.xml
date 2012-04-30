@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources>
+    <drawable name="red">#7f00</drawable>
+    <drawable name="blue">#770000ff</drawable>
+    <drawable name="green">#7700ff00</drawable>
+	<drawable name="yellow">#77ffff00</drawable>
+	
+	<drawable name="screen_background_black">#ff000000</drawable>
+    <drawable name="translucent_background">#D0000000</drawable>
+    <drawable name="transparent_background">#00000000</drawable>
+
+    <color name="solid_red">#f00</color>
+    <color name="solid_white">#ffffffff</color>
+    <color name="solid_blue">#0000ff</color>
+    <color name="solid_green">#f0f0</color>
+    <color name="solid_yellow">#ffffff00</color>
+    <color name="solid_black">#ff000000</color>
+    <color name="solid_gray">#ff747474</color>
+    <color name="solid_dark_gray">#ff2A2A2A</color>
+    <color name="title_red">#ffAA1111</color>
+    <color name="background_gray">#FFEBEBEB</color>
+    <color name="google_gray">#FFF5F5F5</color>
+    <color name="google_black">#FF2D2D2D</color>
+    <color name="google_border_gray">#FFE5E5E5</color>
+    <color name="google_blue">#FF4D90FE</color>
+    <color name="google_border_blue">#FF357AE8</color>
+    <color name="google_link_blue">#15C</color>
+    <color name="google_salmon">#FFDD4B39</color>
+    <color name="google_text_black">#333</color>
+    <color name="crossway_blue">#4f8eab</color>
+    <color name="crossway_gray">#898989</color>
+    <color name="dg_red">#AB1013</color>
+    <color name="dg_black">#2E2E2E</color>
+    <color name="dg_gray">#f8f8f8</color>
+    <color name="dg_border_gray">#D8D8CC</color>
+    <color name="dg_gray_dark">#E6E6DD</color>
+    <color name="dg_text_gray">#B3B6A4</color>
+    <drawable name="solid_black">#ff000000</drawable>
+    <color name="transparent">#00000000</color>
+        
+</resources>

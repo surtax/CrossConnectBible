@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry kind="lib" path="libs/javatar-2.5.jar"/>
+	<classpathentry kind="lib" path="libs/jdom111Fixed.jar"/>
+	<classpathentry kind="lib" path="libs/jsword-all-tweaked.jar" sourcepath="libs-src/jsword-all-tweaked-src.jar"/>
+	<classpathentry kind="lib" path="libs/lucene-analyzers-3.0.3.jar"/>
+	<classpathentry kind="lib" path="libs/lucene-core-3.0.3.jar"/>
+	<classpathentry kind="lib" path="libs/lucene-snowball-3.0.3.jar"/>
+	<classpathentry kind="lib" path="libs/mmseg4j-all-1.8.4.jar"/>
+	<classpathentry kind="lib" path="libs/android-support-v4.jar"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>

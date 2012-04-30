@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Main View and master controller for the main views: ie. Bible Text, 
+	Sermon, Audio Bible
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/notes_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <ScrollView
+                android:id="@+id/notes_scroll_view"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:fadingEdge="none"
+                android:fillViewport="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:saveEnabled="true" >
+
+                <com.crossconnect.views.NotesEditText
+                    android:id="@+id/notes_edit_text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@android:color/transparent"
+                    android:fadingEdge="vertical"
+                    android:gravity="top"
+                    android:padding="5dp"
+                    android:scrollbars="vertical"
+                    android:text=""
+                    android:textSize="22sp" />
+            </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ProgressBar
+                android:id="@+id/notes_progress"
+                style="?android:attr/progressBarStyleLargeInverse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!--
+     		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			android:layout_width="fill_parent" android:layout_height="fill_parent"
+			android:orientation="horizontal" android:gravity="bottom"
+			android:paddingLeft="5px" android:paddingTop="5px"
+			android:paddingRight="5px">
+
+			<LinearLayout android:orientation="horizontal"
+				android:layout_width="fill_parent" android:paddingTop="2dp"
+				android:layout_height="wrap_content" android:layout_weight="1"
+				android:paddingRight="6dip" android:gravity="right">
+				<ImageButton android:layout_height="wrap_content"
+					android:layout_width="wrap_content" android:background="@drawable/next_chapter_pressed"
+					android:id="@+id/menu_button_notes_lock"></ImageButton>
+			</LinearLayout>
+		</LinearLayout>
+        -->
+    </FrameLayout>
+
+</LinearLayout>

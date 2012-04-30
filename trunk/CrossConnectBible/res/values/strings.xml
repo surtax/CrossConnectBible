@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CrossConnect Bible</string>
+    <string name="no_churches">Sorry there are no churches available this moment please check again later.</string>
+    <string name="scrollY_key">preference_scrollY</string>
+    <string name="text_size_key">preference_text_size</string>
+    <string name="book_type_key">book_type</string>
+    <string name="text_font_key">preference_text_font</string>
+    <string name="text_color_key">preference_text_color</string>
+    <string name="book_extra">book_extra</string>
+    <string name="chapter_extra">chapter_extra</string>
+        
+</resources>

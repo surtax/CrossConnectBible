@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="fill_parent"
+    android:orientation="vertical">
+    
+    <LinearLayout android:id="@+id/header" android:layout_height="36sp" android:layout_width="fill_parent" android:background="@color/dg_black">
+       <LinearLayout android:id="@+id/header_box" android:layout_height="fill_parent" android:layout_width="wrap_content" android:orientation="vertical"> 
+           <LinearLayout android:id="@+id/header_text_linearlayout" android:layout_height="wrap_content" android:layout_width="wrap_content" android:paddingTop="3dp">
+               <TextView android:id="@+id/header_translation" android:text="Loading..." android:layout_height="wrap_content" android:layout_width="wrap_content" android:textColor="@color/dg_text_gray" android:textSize="18sp"></TextView>
+           </LinearLayout>
+           <ImageView android:id="@+id/floating_down" android:background="@android:drawable/arrow_down_float" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+       </LinearLayout>> 
+    </LinearLayout>
+    <View android:layout_width="fill_parent" android:layout_height="4sp" android:background="@color/dg_red"/>
+	<LinearLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:orientation="vertical" android:layout_width="fill_parent"
+		android:gravity="center"
+		android:background="@color/dg_gray_dark"
+		android:layout_height="wrap_content">
+    	<ImageView android:id="@+id/floating_down" android:background="@android:drawable/arrow_down_float" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    	<com.crossconnect.views.BookTopicScrollView android:id="@+id/book_type_scrollview" android:layout_width="fill_parent"
+		android:layout_height="80dp" android:background="@color/dg_gray_dark"/>	
+        <View android:layout_width="fill_parent" android:layout_height="4sp" android:background="@color/dg_red"/>
+	    <ImageView android:id="@+id/floating_down" android:background="@android:drawable/arrow_down_float" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+       	<Gallery android:id="@+id/book_gallery"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:gravity="center_vertical" android:spacing="30dp" android:background="@color/dg_gray_dark" android:padding="10sp"/>
+        <View android:layout_width="fill_parent" android:layout_height="4sp" android:background="@color/dg_red"/>
+	    <ImageView android:id="@+id/floating_down" android:background="@android:drawable/arrow_down_float" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+		<Gallery android:id="@+id/chapter_gallery"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:gravity="center_vertical" android:spacing="30dp" android:background="@color/dg_gray_dark" android:padding="10sp"/>
+        <View android:layout_width="fill_parent" android:layout_height="4sp" android:background="@color/dg_red"/>
+        <View android:layout_width="fill_parent" android:layout_height="5sp" android:background="@color/dg_black"/>
+	</LinearLayout>
+    <LinearLayout android:id="@+id/footer" android:layout_height="36sp" android:layout_width="fill_parent" android:background="@color/dg_black">
+       <AutoCompleteTextView android:id="@+id/chapter_selection_textview" android:text="Loading..." android:layout_height="wrap_content" android:layout_width="wrap_content" android:textSize="18sp" android:layout_weight="1" style="?android:attr/textViewStyle" android:lines="1" android:textColor="@color/google_text_black"
+                android:background="@color/dg_gray"
+           />
+       <LinearLayout android:id="@+id/linearLayout2" android:layout_height="fill_parent" android:layout_width="wrap_content" android:gravity="right">
+           <View android:layout_height="fill_parent" android:layout_width="1dp" android:background="@drawable/gradient_black_white_black" android:layout_marginLeft="1dp" android:layout_marginRight="1dp"/>
+           <ImageButton style="@style/TitleIcon" android:background="@android:drawable/ic_menu_slideshow" android:id="@+id/go_btn"></ImageButton>
+       </LinearLayout>
+   </LinearLayout>
+	    
+</LinearLayout>

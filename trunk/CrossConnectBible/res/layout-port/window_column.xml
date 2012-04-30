@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Main View and master controller for the main views: ie. Bible Text, Sermon, Audio Bible -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:drawable/dialog_frame"
+    android:gravity="right"
+    >
+    
+    
+    <LinearLayout         
+    	android:layout_width="200sp"
+		android:layout_height="350sp"	
+		android:orientation="vertical" 
+		android:gravity="left" 
+		android:background="@color/dg_gray"
+		android:layout_weight="1">
+	    <LinearLayout         
+	    android:background="@color/dg_black"
+    	android:layout_width="fill_parent"
+		android:layout_height="wrap_content"	
+		android:orientation="horizontal" 
+		android:gravity="right" 
+		>
+		      <TextView 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:layout_weight="1" 
+            android:text="Philemon 1" 
+            android:textColor="@color/solid_white"
+            android:id="@+id/audio_reading_title"
+            android:textSize="18sp"
+            android:maxLines="1"/>
+		
+	    	<ImageButton android:background="@drawable/close_icon" android:layout_height="20sp" android:layout_width="20sp" android:id="@+id/close_window"></ImageButton>
+		</LinearLayout>
+	    <TextView 
+	       android:background="@color/dg_gray"
+	    	android:layout_width="wrap_content" 
+	    	android:layout_height="wrap_content" 
+	    	android:layout_weight="1" 
+	    	android:text="Philemon 1" 
+			android:textSize="18sp"
+	    	android:id="@+id/audio_reading_description"/>
+    </LinearLayout>
+</LinearLayout>
