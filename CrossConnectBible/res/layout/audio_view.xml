@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Main View and master controller for the main views: ie. Bible Text, Sermon, Audio Bible -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+	android:gravity="bottom"
+    >
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1">
+ 	   <com.crossconnect.actions.ColumnListView android:id="@+id/audio_list" android:layout_height="wrap_content" android:layout_width="match_parent"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Main View and master controller for the main views: ie. Bible Text, Sermon, Audio Bible -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="200sp"
+    android:layout_height="fill_parent"
+    >
+    <!-- <BibleTextView/> -->
+	<com.crossconnect.actions.BibleTextScrollView android:id="@+id/bibleScrollView"
+	android:fadingEdge="none"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:saveEnabled="true"
+		android:focusableInTouchMode="true" android:focusable="true"
+		android:fillViewport="true">
+		<LinearLayout android:id="@+id/linearInside" android:orientation="vertical" android:layout_height="wrap_content" android:layout_width="fill_parent">
+            <View android:layout_width="fill_parent" android:layout_height="1sp" android:background="@color/dg_border_gray"/>
+            <Button android:id="@+id/prev_chapter_button" android:text="Previous Chapter" android:layout_height="30sp" android:layout_width="fill_parent" android:background="@drawable/next_prev_chapter_selector" android:textColor="@color/dg_red"/>			
+            <View android:layout_width="fill_parent" android:layout_height="1sp" android:background="@color/dg_border_gray"/>
+			<com.crossconnect.actions.BibleTextView style="?android:attr/textViewStyle"
+			    android:textColor="@color/google_text_black"
+				android:editable="false"
+				android:id="@+id/bible_text" android:paddingTop="4dip"
+				android:paddingLeft="6dip" android:paddingRight="6dip"
+				android:layout_width="wrap_content"
+				android:layout_weight="1"
+				android:layout_height="wrap_content" android:textSize="16sp"
+				android:gravity="fill" android:lineSpacingExtra="2dip"
+				android:typeface="serif" android:bufferType="spannable" />
+            <View android:layout_width="fill_parent" android:layout_height="1sp" android:background="@color/dg_border_gray"/>
+			<Button android:id="@+id/next_chapter_button" android:text="Next Chapter" android:layout_below="@+id/bible_text" android:layout_height="30sp" android:layout_width="fill_parent" android:background="@drawable/next_prev_chapter_selector" android:textColor="@color/dg_red"/>
+            <View android:layout_width="fill_parent" android:layout_height="1sp" android:background="@color/dg_border_gray"/>
+		</LinearLayout>
+	</com.crossconnect.actions.BibleTextScrollView>
+</LinearLayout>

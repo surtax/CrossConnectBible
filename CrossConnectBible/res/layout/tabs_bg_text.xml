@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<!--
+   Copyright (c) 2010 Josh Clemm
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/tabsLayout" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:background="@drawable/tab_bg_selector"
+	android:gravity="center" android:orientation="vertical" android:paddingLeft="15dp" android:paddingRight="15dp">
+	<TextView android:id="@+id/tabsText" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:text="Title"
+		android:background="@drawable/swipey_tab_indicator"
+		android:textSize="24dip" android:textColor="@drawable/tab_text_selector" />
+</LinearLayout>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.crossconnect.actions"
+      android:versionCode="1"
+      android:versionName="1.0"
+      >
+    <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="15"/>
+
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+        <activity android:name="com.crossconnect.activity.SplashActivity"
+                  android:label="@string/app_name" android:theme="@style/LightFullScreen" android:windowSoftInputMode="adjustPan"
+                  android:noHistory="true"
+                  >
+            <intent-filter>
+<!--                 <action android:name="android.nfc.action.TAG_DISCOVERED"/>
+                <action android:name="android.nfc.action.TECH_DISCOVERED"/>
+ -->                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <meta-data android:name="android.nfc.action.TECH_DISCOVERED" android:resource="@xml/filter_nfc" />
+        </activity>
+
+       <activity android:name="com.crossconnect.activity.WelcomeActivity"
+                  android:label="@string/app_name" android:theme="@style/LightFullScreen" android:windowSoftInputMode="adjustPan"
+                  android:noHistory="true"
+                  >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Main"
+                  android:label="@string/app_name" android:theme="@style/LightFullScreen" android:windowSoftInputMode="adjustPan"
+                  >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".AudioPlayer"
+                  android:label="@string/app_name">
+			<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="ChapterSelectionActivity" android:theme="@style/Theme.Transparent"
+                  android:label="@string/app_name">
+			<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="WindowsActivity" android:theme="@style/Theme.Transparent"
+                  android:label="@string/app_name">
+			<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.crossconnect.activity.TabsActivity" android:theme="@style/Theme.Transparent"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        
+        
+        <activity android:name="ResourceRepositoryActivity" android:theme="@style/LightFullScreen"
+                  android:label="@string/app_name">
+			<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.crossconnect.activity.BookManagerActivity" android:theme="@style/LightFullScreen"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.crossconnect.activity.notemanager.PersonalNotesActivity" android:theme="@style/LightFullScreen"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+            
+        <activity android:name="com.crossconnect.activity.NotesActivity" android:theme="@style/LightFullScreen"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.crossconnect.activity.MainActivity" android:theme="@style/LightFullScreen"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+            
+        
+       <activity android:name=".PreferencesFromXml" android:theme="@style/LightFullScreen"
+            android:label="Settings">
+        </activity>
+        
+        <activity android:name="com.crossconnect.activity.DownloadStatus"  android:theme="@style/Theme.Translucent"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.crossconnect.activity.ArticleActivity" android:theme="@style/LightFullScreen"
+            android:configChanges="orientation|keyboardHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+            
+
+        <activity android:name="musicplayer.MusicActivity"
+                  android:label="Random Music Player"
+                  android:theme="@style/LightFullScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        
+        <!-- Broadcast Receiver that will process AppWidget updates -->
+        <receiver android:name="com.crossconnect.widget.WordWidget" android:label="@string/widget_name">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider"
+                android:resource="@xml/widget_word" />
+        </receiver>
+
+        <!-- Service to perform web API queries -->
+        <service android:name="com.crossconnect.widget.WordWidget$UpdateService" />
+        
+        
+        
+        
+        <service android:exported="false" android:name="musicplayer.MusicService">
+            <intent-filter>
+                <action android:name="com.example.android.musicplayer.action.PLAY" />
+                <action android:name="com.example.android.musicplayer.action.PAUSE" />
+                <action android:name="com.example.android.musicplayer.action.SKIP" />
+                <action android:name="com.example.android.musicplayer.action.REWIND" />
+                <action android:name="com.example.android.musicplayer.action.STOP" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.example.android.musicplayer.action.URL" />
+                <data android:scheme="http" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.example.android.musicplayer.action.URL" />
+                <data android:scheme="file" />
+            </intent-filter>
+            </service>
+
+        <receiver android:name="musicplayer.MusicIntentReceiver">
+            <intent-filter>
+                <action android:name="android.media.AUDIO_BECOMING_NOISY" />
+            </intent-filter>
+        </receiver>
+    </application>
+            <uses-permission android:name="android.permission.INTERNET"/>
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+        <uses-permission android:name="android.permission.NFC" />
+    
+        
+    
+</manifest>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="fill_parent" android:orientation="vertical">
+
+    <LinearLayout android:id="@+id/header" style="@style/TitleBar">
+        <ImageView android:src="@drawable/icon" android:id="@+id/title_bar_icon" style="@style/TitleAppIcon"/>
+        <LinearLayout android:id="@+id/header_box" android:layout_height="fill_parent" android:layout_width="wrap_content" android:orientation="vertical" android:gravity="center_vertical"> 
+            <TextView android:id="@+id/header_title" android:text="Tabs" android:layout_height="wrap_content" android:layout_width="wrap_content" android:textColor="@color/dg_text_gray" android:textSize="22sp" android:paddingTop="3dp"></TextView>
+        </LinearLayout>> 
+        <LinearLayout android:id="@+id/linearLayout2" android:layout_height="fill_parent" android:layout_width="fill_parent" android:gravity="center_vertical|right">
+            <ImageButton android:background="@drawable/ic_menu_add" android:id="@+id/menu_button_add_window" style="@style/TitleIcon"></ImageButton>        
+        </LinearLayout>
+    </LinearLayout>
+    <View android:layout_width="fill_parent" android:layout_height="2sp" android:background="@color/dg_red"/>
+	<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:id="@android:id/tabhost"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content" >
+	    <HorizontalScrollView
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:scrollbars="none">
+		    <TabWidget
+		        android:id="@android:id/tabs"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content" />
+	    </HorizontalScrollView>
+	                       <FrameLayout android:visibility="gone"
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp" />
+	    
+    </TabHost>
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:orientation="vertical" android:layout_width="fill_parent"
+		android:gravity="center_vertical" android:layout_height="wrap_content" android:visibility="gone">
+
+		<Gallery android:id="@+id/windows_gallery"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:gravity="center_vertical" android:spacing="4dp" />
+	</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Main View and master controller for the main views: ie. Bible Text, Sermon, Audio Bible -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="right"
+    android:background="@color/dg_gray"
+    >
+    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="left" android:layout_weight="1">
+	    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1" android:text="Philemon 1" android:id="@+id/note_row_reference"></TextView>
+	    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1" android:text="Philemon 1" android:id="@+id/note_row_text"></TextView>
+    </LinearLayout>
+    <ImageButton android:id="@+id/audio_download_icon" android:layout_height="wrap_content" android:src="@drawable/icon" android:layout_width="wrap_content"></ImageButton>
+    
+    
+</LinearLayout>

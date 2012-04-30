@@ -1,0 +1,5 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true" android:drawable="@drawable/star_pressed" />
+    <item android:state_focused="true" android:drawable="@drawable/star_logo_focus" />
+    <item android:drawable="@drawable/star_logo_normal" />
+</selector>
