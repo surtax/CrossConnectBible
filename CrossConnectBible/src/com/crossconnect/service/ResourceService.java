@@ -4,8 +4,6 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-import utility.Utils;
-
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;

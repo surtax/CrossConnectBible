@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
  <selector xmlns:android="http://schemas.android.com/apk/res/android">
      <item android:state_pressed="true"
-           android:drawable="@drawable/following_selector" />
-     <item android:drawable="@drawable/follow_normal" /> <!-- default -->
+           android:drawable="@drawable/following_pressed" />
+     <item android:drawable="@drawable/following_normal" /> <!-- default -->
  </selector>

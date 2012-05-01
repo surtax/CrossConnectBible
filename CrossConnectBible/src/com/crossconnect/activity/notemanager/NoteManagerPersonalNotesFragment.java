@@ -18,18 +18,11 @@ package com.crossconnect.activity.notemanager;
 
 import java.util.List;
 
-import musicplayer.MusicService;
 import net.londatiga.android.QuickActionVertical;
 import net.londatiga.qahorizontal.ActionItem;
 import net.londatiga.qahorizontal.QuickActionHorizontal;
-import net.sword.engine.sword.SwordContentFacade;
-
-import android.app.Activity;
-import android.app.DownloadManager;
-import android.app.DownloadManager.Request;
 import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.support.v4.app.LoaderManager;
@@ -38,23 +31,17 @@ import android.support.v4.content.Loader;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.PopupWindow.OnDismissListener;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.PopupWindow.OnDismissListener;
 
-import com.crossconnect.activity.ArticleActivity;
-import com.crossconnect.activity.MainActivity;
-import com.crossconnect.activity.NotesActivity;
-import com.crossconnect.model.BibleText;
-import com.crossconnect.model.Note;
-import com.crossconnect.model.OnlineAudioResource;
-import com.crossconnect.model.SwordBibleText;
-import com.crossconnect.service.NotesService;
 import com.crossconnect.actions.R;
+import com.crossconnect.model.Note;
+import com.crossconnect.service.NotesService;
 
 public class NoteManagerPersonalNotesFragment extends ListFragment implements LoaderManager.LoaderCallbacks<List<Note>> {
 	

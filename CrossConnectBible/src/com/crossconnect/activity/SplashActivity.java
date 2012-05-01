@@ -53,10 +53,10 @@ public class SplashActivity extends Activity{
 //            
 //            SharedPreferences settings = getSharedPreferences("APP SETTINGS", MODE_PRIVATE);
 //            SharedPreferences.Editor editor = settings.edit();
-//            editor.putString("SharedPreferencesHelper.CURRENT_BOOK", readFromNFCBibleText.getBook());
-//            editor.putString("SharedPreferencesHelper.CURRENT_CHAPTER", String.valueOf(readFromNFCBibleText.getChapter()));
-//            editor.putString("SharedPreferencesHelper.CURRENT_VERSE", String.valueOf(readFromNFCBibleText.getVerse()));
-//            editor.putString("SharedPreferencesHelper.CURRENT_TRANSLATION", readFromNFCBibleText.getTranslation().getInitials());
+//            editor.putString(SharedPreferencesHelper.CURRENT_BOOK, readFromNFCBibleText.getBook());
+//            editor.putString(SharedPreferencesHelper.CURRENT_CHAPTER, String.valueOf(readFromNFCBibleText.getChapter()));
+//            editor.putString(SharedPreferencesHelper.CURRENT_VERSE, String.valueOf(readFromNFCBibleText.getVerse()));
+//            editor.putString(SharedPreferencesHelper.CURRENT_TRANSLATION, readFromNFCBibleText.getTranslation().getInitials());
 //
 //            
 //            // Commit the edits!

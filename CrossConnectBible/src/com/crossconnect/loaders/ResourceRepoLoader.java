@@ -2,12 +2,12 @@ package com.crossconnect.loaders;
 
 
 import java.util.List;
-import com.crossconnect.model.ResourceRepository;
+
 import android.content.Context;
 import android.support.v4.content.AsyncTaskLoader;
 import android.util.Log;
 
-import com.crossconnect.model.BibleText;
+import com.crossconnect.model.ResourceRepository;
 import com.crossconnect.service.CrossConnectServerService;
 
     /**

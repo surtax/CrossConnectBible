@@ -85,7 +85,7 @@ public class ResourceFragment extends ListFragment implements LoaderManager.Load
 
     public void updateResources(BibleText loadingBibleText) {
     	this.loadingBibleText = loadingBibleText;
-    	if (bibleText == null || (bibleText != null && !loadingBibleText.getShortReferenceBookChapterVerse().equals(bibleText))) {
+    	if (mAdapter != null && (bibleText == null || (bibleText != null && !loadingBibleText.getShortReferenceBookChapterVerse().equals(bibleText)))) {
             Bundle bundle = new Bundle();
             bundle.putParcelable("BibleText", loadingBibleText);
             mAdapter.clear();

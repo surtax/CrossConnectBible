@@ -1,8 +1,6 @@
 package com.crossconnect.activity;
 
 import android.content.Context;
-import android.nfc.NfcAdapter;
-import android.nfc.Tag;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -14,16 +12,12 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
 
-import com.crossconnect.activity.bookmanager.BookmanagerBibleFragment;
-import com.crossconnect.activity.bookmanager.BookmanagerCommentaryFragment;
-import com.crossconnect.activity.bookmanager.BookmanagerInstalledFragment;
+import com.crossconnect.actions.R;
 import com.crossconnect.activity.notemanager.NoteManagerBibleNotesFragment;
 import com.crossconnect.activity.notemanager.NoteManagerPersonalNotesFragment;
 import com.crossconnect.swipeytabs.SwipeyTabFragment;
 import com.crossconnect.swipeytabs.SwipeyTabs;
 import com.crossconnect.swipeytabs.SwipeyTabsAdapter;
-import com.crossconnect.util.MifareUltralightTagTester;
-import com.crossconnect.actions.R;
 
 public class NotesActivity extends FragmentActivity {
 

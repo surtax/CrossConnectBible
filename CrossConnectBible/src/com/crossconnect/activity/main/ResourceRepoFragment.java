@@ -28,12 +28,10 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ListView;
 
+import com.crossconnect.actions.R;
 import com.crossconnect.adapter.ResourceRepoListAdapter;
 import com.crossconnect.loaders.ResourceRepoLoader;
-import com.crossconnect.model.BibleText;
 import com.crossconnect.model.ResourceRepository;
-import com.crossconnect.actions.BibleTextView;
-import com.crossconnect.actions.R;
 
 public class ResourceRepoFragment extends ListFragment implements
 		LoaderManager.LoaderCallbacks<List<ResourceRepository>> {

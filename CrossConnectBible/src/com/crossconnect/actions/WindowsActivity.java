@@ -31,9 +31,9 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView.OnItemSelectedListener;
@@ -41,14 +41,12 @@ import android.widget.ArrayAdapter;
 import android.widget.Gallery;
 import android.widget.ImageButton;
 import android.widget.SpinnerAdapter;
-import android.widget.TabHost.OnTabChangeListener;
 import android.widget.TabHost.TabContentFactory;
 import android.widget.TextView;
 
 import com.crossconnect.model.BibleText;
 import com.crossconnect.model.Window;
 import com.crossconnect.service.WindowsService;
-import com.crossconnect.actions.R;
 
 
 public class WindowsActivity extends Activity implements TabContentFactory {

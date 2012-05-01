@@ -5,6 +5,8 @@ import net.sword.engine.sword.SwordDocumentFacade;
 
 import org.crosswire.common.progress.Progress;
 
+import utility.SharedPreferencesHelper;
+
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -17,13 +19,6 @@ import com.crossconnect.service.ReportListenerService;
 import com.crossconnect.util.RequestResultCodes;
 import com.crossconnect.actions.R;
 
-/**Show all Progress status
- * see BibleDesktop JobsProgressBar for example use
- * 
- * @author Martin Denham [mjdenham at gmail dot com]
- * @see gnu.lgpl.License for license details.<br>
- *      The copyright to this program is held by it's author.
- */
 public class DownloadStatus extends ProgressActivityBase {
 	private static final String TAG = "DownloadStatus";
 	
@@ -94,10 +89,10 @@ public class DownloadStatus extends ProgressActivityBase {
     	
         SharedPreferences settings = getSharedPreferences("APP SETTINGS", MODE_PRIVATE);
         SharedPreferences.Editor editor = settings.edit();
-        editor.putString("SharedPreferencesHelper.CURRENT_BOOK", "Philipiians");
-        editor.putString("SharedPreferencesHelper.CURRENT_CHAPTER", "1");
-        editor.putString("SharedPreferencesHelper.CURRENT_VERSE", "1");
-        editor.putString("SharedPreferencesHelper.CURRENT_TRANSLATION", SwordDocumentFacade.getInstance().getDocuments().get(0).getInitials());
+        editor.putString(SharedPreferencesHelper.CURRENT_BOOK, "Philipiians");
+        editor.putString(SharedPreferencesHelper.CURRENT_CHAPTER, "1");
+        editor.putString(SharedPreferencesHelper.CURRENT_VERSE, "1");
+        editor.putString(SharedPreferencesHelper.CURRENT_TRANSLATION, SwordDocumentFacade.getInstance().getDocuments().get(0).getInitials());
 
         
         // Commit the edits!

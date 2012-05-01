@@ -38,19 +38,17 @@ import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.Gallery;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.SpinnerAdapter;
 import android.widget.TabHost;
 import android.widget.TabHost.OnTabChangeListener;
 import android.widget.TabHost.TabContentFactory;
-import android.widget.TabWidget;
 import android.widget.TextView;
 
+import com.crossconnect.actions.ChapterSelectionActivity;
+import com.crossconnect.actions.R;
 import com.crossconnect.model.BibleText;
 import com.crossconnect.model.Window;
 import com.crossconnect.service.WindowsService;
-import com.crossconnect.actions.ChapterSelectionActivity;
-import com.crossconnect.actions.R;
 
 
 public class TabsActivity extends Activity implements TabContentFactory {

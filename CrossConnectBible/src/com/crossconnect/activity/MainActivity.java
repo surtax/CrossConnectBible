@@ -37,14 +37,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.PopupWindow.OnDismissListener;
-import android.widget.Button;
 import android.widget.TabHost;
 import android.widget.TabWidget;
 import android.widget.TextView;
 
+import com.crossconnect.actions.ChapterSelectionActivity;
+import com.crossconnect.actions.PreferencesFromXml;
+import com.crossconnect.actions.R;
+import com.crossconnect.actions.ResourceRepositoryActivity;
 import com.crossconnect.activity.main.AudioBibleFragment;
 import com.crossconnect.activity.main.BibleTextFragment;
 import com.crossconnect.activity.main.NotesEditorFragment;
@@ -52,10 +56,6 @@ import com.crossconnect.activity.main.ResourceFragment;
 import com.crossconnect.model.BibleText;
 import com.crossconnect.service.NotesService;
 import com.crossconnect.service.ResourceService;
-import com.crossconnect.actions.ChapterSelectionActivity;
-import com.crossconnect.actions.PreferencesFromXml;
-import com.crossconnect.actions.R;
-import com.crossconnect.actions.ResourceRepositoryActivity;
 
 /**
  * Demonstrates combining a TabHost with a ViewPager to implement a tab UI that switches between tabs and also allows
@@ -73,7 +73,6 @@ public class MainActivity extends FragmentActivity {
     
     Button headerTitleText;
     
-    private final static int HONEYCOMB = 11;
     private final static String DEFAULT_TAB = "DEFAULT_TAB";
     
     private final static String AUDIO_TAG = "Audio";
@@ -237,8 +236,6 @@ public class MainActivity extends FragmentActivity {
 			public void onClick(View v) {
 		        mQuickAction  = new QuickActionHorizontal(findViewById(R.id.title_bar_icon));
 		        
-		        final String text;
-		        
 		        settingsAction.setOnClickListener(new OnClickListener() {
 		            
 		            //Copy text action item
@@ -401,7 +398,7 @@ public class MainActivity extends FragmentActivity {
     }
 
     
-    private void setupTab(final View view, final String tag, int iconDrawable, Class fragment) {
+    private void setupTab(final View view, final String tag, int iconDrawable, Class<?> fragment) {
         View tabview = createTabView(mTabHost.getContext(), tag, iconDrawable);
 
         mTabsAdapter.addTab(mTabHost.newTabSpec(tag).setIndicator(tabview), fragment, null);

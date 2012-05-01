@@ -244,18 +244,18 @@ public class Utils {
    public static BibleText loadBibleText(SharedPreferences pref) {
        //Load last opened verse
        String bibleBook = pref.getString(SharedPreferencesHelper.CURRENT_BOOK, "Philipiians");
-       int chapter = Integer.valueOf(pref.getString("SharedPreferencesHelper.CURRENT_CHAPTER", "1"));
-       int verse = Integer.valueOf(pref.getString("SharedPreferencesHelper.CURRENT_VERSE", "1"));
-       String translation = pref.getString("SharedPreferencesHelper.CURRENT_TRANSLATION", "ESV");
+       int chapter = Integer.valueOf(pref.getString(SharedPreferencesHelper.CURRENT_CHAPTER, "1"));
+       int verse = Integer.valueOf(pref.getString(SharedPreferencesHelper.CURRENT_VERSE, "1"));
+       String translation = pref.getString(SharedPreferencesHelper.CURRENT_TRANSLATION, "ESV");
        return new SwordBibleText(bibleBook, chapter, verse, translation);
    }
 
    public static void saveCurrentPassage(BibleText bibleText, SharedPreferences settings, int verseNumber) {
         SharedPreferences.Editor editor = settings.edit();
-        editor.putString("SharedPreferencesHelper.CURRENT_BOOK", bibleText.getBook());
-        editor.putString("SharedPreferencesHelper.CURRENT_CHAPTER", String.valueOf(bibleText.getChapter()));
-        editor.putString("SharedPreferencesHelper.CURRENT_VERSE", String.valueOf(verseNumber));
-        editor.putString("SharedPreferencesHelper.CURRENT_TRANSLATION", bibleText.getTranslation().getInitials());
+        editor.putString(SharedPreferencesHelper.CURRENT_BOOK, bibleText.getBook());
+        editor.putString(SharedPreferencesHelper.CURRENT_CHAPTER, String.valueOf(bibleText.getChapter()));
+        editor.putString(SharedPreferencesHelper.CURRENT_VERSE, String.valueOf(verseNumber));
+        editor.putString(SharedPreferencesHelper.CURRENT_TRANSLATION, bibleText.getTranslation().getInitials());
         editor.commit();
     }
    

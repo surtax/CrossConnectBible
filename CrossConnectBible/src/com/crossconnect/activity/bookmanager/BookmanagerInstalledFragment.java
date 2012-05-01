@@ -23,9 +23,7 @@ import java.util.List;
 import net.sword.engine.sword.AcceptableBookTypeFilter;
 import net.sword.engine.sword.SwordDocumentFacade;
 
-import org.crosswire.common.util.Language;
 import org.crosswire.jsword.book.Book;
-import org.crosswire.jsword.book.BookCategory;
 import org.crosswire.jsword.book.BookFilter;
 
 import android.app.Activity;
@@ -44,9 +42,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.crossconnect.activity.DownloadStatus;
-import com.crossconnect.service.DownloadManager;
 import com.crossconnect.actions.R;
+import com.crossconnect.service.DownloadManager;
 
 public class BookmanagerInstalledFragment extends ListFragment implements LoaderManager.LoaderCallbacks<List<Book>> {
 	

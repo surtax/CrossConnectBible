@@ -46,7 +46,7 @@ import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
 
-import com.crossconnect.activity.ArticleActivity;
+import com.crossconnect.actions.R;
 import com.crossconnect.activity.MainActivity;
 import com.crossconnect.activity.audio.AudioPlayerBibleFragment;
 import com.crossconnect.activity.audio.AudioPlayerDownloadedFragment;
@@ -54,7 +54,6 @@ import com.crossconnect.model.SwordBibleText;
 import com.crossconnect.swipeytabs.SwipeyTabFragment;
 import com.crossconnect.swipeytabs.SwipeyTabs;
 import com.crossconnect.swipeytabs.SwipeyTabsAdapter;
-import com.crossconnect.actions.R;
 
 
 /** 

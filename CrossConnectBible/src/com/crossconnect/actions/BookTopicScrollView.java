@@ -9,8 +9,6 @@ import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewTreeObserver.OnScrollChangedListener;
-import android.widget.AbsListView.OnScrollListener;
-import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
 

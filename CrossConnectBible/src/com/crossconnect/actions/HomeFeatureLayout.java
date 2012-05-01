@@ -12,7 +12,6 @@ import android.view.View;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
-import android.widget.ListView;
 
 public class HomeFeatureLayout extends HorizontalScrollView {
     private static final int SWIPE_MIN_DISTANCE = 50;

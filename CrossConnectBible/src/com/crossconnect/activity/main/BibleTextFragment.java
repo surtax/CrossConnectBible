@@ -15,6 +15,8 @@ package com.crossconnect.activity.main;
 
 import java.util.List;
 
+import utility.SharedPreferencesHelper;
+
 import net.sword.engine.sword.SwordContentFacade;
 import android.content.Context;
 import android.content.Intent;
@@ -177,10 +179,10 @@ public class BibleTextFragment extends Fragment implements LoaderManager.LoaderC
         
         if (bibleTextView.getBibleText() == null) {
             //Load last opened verse
-            String currentBook = getActivity().getSharedPreferences("APP SETTINGS", Context.MODE_PRIVATE).getString("SharedPreferencesHelper.CURRENT_BOOK", "Philipiians");
-            String currentChapter = getActivity().getSharedPreferences("APP SETTINGS", Context.MODE_PRIVATE).getString("SharedPreferencesHelper.CURRENT_CHAPTER", "1");
-            String currentVerse = getActivity().getSharedPreferences("APP SETTINGS", Context.MODE_PRIVATE).getString("SharedPreferencesHelper.CURRENT_VERSE", "1");
-            String currentTranslation = getActivity().getSharedPreferences("APP SETTINGS", Context.MODE_PRIVATE).getString("SharedPreferencesHelper.CURRENT_TRANSLATION", "ESV");
+            String currentBook = getActivity().getSharedPreferences("APP SETTINGS", Context.MODE_PRIVATE).getString(SharedPreferencesHelper.CURRENT_BOOK, "Philipiians");
+            String currentChapter = getActivity().getSharedPreferences("APP SETTINGS", Context.MODE_PRIVATE).getString(SharedPreferencesHelper.CURRENT_CHAPTER, "1");
+            String currentVerse = getActivity().getSharedPreferences("APP SETTINGS", Context.MODE_PRIVATE).getString(SharedPreferencesHelper.CURRENT_VERSE, "1");
+            String currentTranslation = getActivity().getSharedPreferences("APP SETTINGS", Context.MODE_PRIVATE).getString(SharedPreferencesHelper.CURRENT_TRANSLATION, "ESV");
             new SwordInitTask().execute(currentBook, currentChapter, currentVerse, currentTranslation);
         }
 
@@ -338,30 +340,6 @@ public class BibleTextFragment extends Fragment implements LoaderManager.LoaderC
             //Set the verseNumber to what is currently being viewed
             int verseNumber = bibleTextView.yToVerse(bibleScrollView.getScrollY(), getActivity().findViewById(R.id.prev_chapter_button).getHeight());         
             return verseNumber;
-    }
-
-    private void saveCurrentPassage(BibleText bibleText) {
-        // We need an Editor object to make preference changes.
-        // All objects are from android.context.Context
-        SharedPreferences settings = getActivity().getSharedPreferences("APP SETTINGS", Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = settings.edit();
-        editor.putString("SharedPreferencesHelper.CURRENT_BOOK", bibleText.getBook());
-        editor.putString("SharedPreferencesHelper.CURRENT_CHAPTER", String.valueOf(bibleText.getChapter()));
-
-        //TODO: at the moment this gets called even when it is not visible and causes problems so hacky solution to just try catch it
-        try {
-            //Set the verseNumber to what is currently being viewed
-            int verseNumber = bibleTextView.yToVerse(bibleScrollView.getScrollY(), getActivity().findViewById(R.id.prev_chapter_button).getHeight());         
-            editor.putString("SharedPreferencesHelper.CURRENT_VERSE", String.valueOf(verseNumber));
-        } catch (Exception e) {
-        }
-        
-        //TODO: verse restore doens't yet work
-        editor.putString("SharedPreferencesHelper.CURRENT_TRANSLATION", bibleText.getTranslation().getInitials());
-
-        
-        // Commit the edits!
-        editor.commit();
     }
 
     @Override
