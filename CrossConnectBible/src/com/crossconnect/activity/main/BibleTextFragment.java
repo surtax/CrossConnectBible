@@ -298,43 +298,44 @@ public class BibleTextFragment extends Fragment implements LoaderManager.LoaderC
      */
     public void updateBibleTextView(final BibleText bibleText) {
 
-    	loadSettings();
-
-    	
-    	if (bibleTextView != null && !bibleText.equals(bibleTextView.getBibleText())) {
-
-	        bibleTextView.setBibleText(bibleText);
-	        
-	//        String note = notesService.getNotes(bibleText.getKey());
-	//        if (note != null) {
-	//            notesEditText.setText(note);
-	//        } else {
-	//            notesEditText.setText("");
-	//        }
-	//        notesEditText.lock();
+    	if (bibleTextView != null) {
+        	loadSettings();
+    		if (!bibleText.equals(bibleTextView.getBibleText())) {
+	    	
 	
-	        
-	        //Scroll to the required  verse after reload, will be verse 1 if new chapter
-	        bibleTextView.post(new Runnable(){
-	            public void run(){
-	                try{
-	                    getActivity().dismissDialog(LOADING_DIALOG);
-	                } catch (Exception e) {
-	                    
-	                }
-	//                sermonBtn.requestFocus();
-	                
-	                //only scroll to the verse if this thing is even visible 
-	                if (getActivity().findViewById(R.id.prev_chapter_button) != null && bibleTextView.isShown() && bibleTextView.getBibleText() != null) {
-	                    bibleTextView.scrollToVerse(bibleText.getVerse(), getActivity().findViewById(R.id.prev_chapter_button).getHeight());
-	                }
-	                
-	                //do not give the editbox focus automatically when activity starts
-	                bibleTextView.clearFocus();
-	//                grabFocus.requestFocus();
-	
-	            };
-	        });
+		        bibleTextView.setBibleText(bibleText);
+		        
+		//        String note = notesService.getNotes(bibleText.getKey());
+		//        if (note != null) {
+		//            notesEditText.setText(note);
+		//        } else {
+		//            notesEditText.setText("");
+		//        }
+		//        notesEditText.lock();
+		
+		        
+		        //Scroll to the required  verse after reload, will be verse 1 if new chapter
+		        bibleTextView.post(new Runnable(){
+		            public void run(){
+		                try{
+		                    getActivity().dismissDialog(LOADING_DIALOG);
+		                } catch (Exception e) {
+		                    
+		                }
+		//                sermonBtn.requestFocus();
+		                
+		                //only scroll to the verse if this thing is even visible 
+		                if (getActivity().findViewById(R.id.prev_chapter_button) != null && bibleTextView.isShown() && bibleTextView.getBibleText() != null) {
+		                    bibleTextView.scrollToVerse(bibleText.getVerse(), getActivity().findViewById(R.id.prev_chapter_button).getHeight());
+		                }
+		                
+		                //do not give the editbox focus automatically when activity starts
+		                bibleTextView.clearFocus();
+		//                grabFocus.requestFocus();
+		
+		            };
+		        });
+	    	}
     	}
     }
     
