@@ -279,9 +279,9 @@ public class NotesEditText extends EditText {
     
     private void updateLockBtn() {
         if (locked) {
-        	lockBtn.setBackgroundResource(android.R.drawable.ic_menu_edit);
+        	lockBtn.setBackgroundResource(R.drawable.icon_pen);
         } else {
-        	lockBtn.setBackgroundResource(android.R.drawable.ic_menu_save);
+        	lockBtn.setBackgroundResource(R.drawable.icon_save);
         }
     }
     

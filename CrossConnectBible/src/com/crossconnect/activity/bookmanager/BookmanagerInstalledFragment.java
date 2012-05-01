@@ -39,6 +39,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -222,7 +223,7 @@ public class BookmanagerInstalledFragment extends ListFragment implements Loader
 //            }
 
             Book item = getItem(position);
-//            ((ImageView)view.findViewById(R.id.icon)).setImageDrawable(item.getIcon());
+            ((ImageView)view.findViewById(R.id.icon)).setImageResource(R.drawable.icon_book_rss);
             ((TextView)view.findViewById(R.id.text)).setText(item.getName());
 
             return view;

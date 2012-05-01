@@ -43,6 +43,7 @@ import android.view.View.OnClickListener;
 import android.view.animation.AnimationUtils;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.PopupWindow.OnDismissListener;
 import android.widget.ProgressBar;
@@ -369,7 +370,11 @@ public class ResourceFragment extends ListFragment implements LoaderManager.Load
             }
 
             OnlineAudioResource item = getItem(position);
-//            ((ImageView)view.findViewById(R.id.icon)).setImageDrawable(item.getIcon());
+            if (item.getAudioURL() != null) {
+            	((ImageView)view.findViewById(R.id.icon)).setImageResource(R.drawable.icon_orb_rss);
+            } else {
+            	((ImageView)view.findViewById(R.id.icon)).setImageResource(R.drawable.icon_file_document);
+            }
             ((TextView)view.findViewById(R.id.text)).setText(item.getResourceName() + " " + item.getResourceVerse());
 
             return view;

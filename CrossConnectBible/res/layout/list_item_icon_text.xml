@@ -20,7 +20,7 @@
     android:layout_height="match_parent">
 
     <ImageView android:id="@+id/icon"
-        android:src="@drawable/desisinrggod_logo"
+        android:src="@drawable/icon_bible"
         android:layout_width="48dip"
         android:layout_height="48dip" />
 

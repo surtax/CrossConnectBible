@@ -38,6 +38,7 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.PopupWindow.OnDismissListener;
 import android.widget.TextView;
@@ -110,7 +111,7 @@ public class AudioBibleFragment extends ListFragment {
                 view = convertView;
             }
 
-//            ((ImageView)view.findViewById(R.id.icon)).setImageDrawable(item.getIcon());
+        	((ImageView)view.findViewById(R.id.icon)).setImageResource(R.drawable.icon_book_rss);
             ((TextView)view.findViewById(R.id.text)).setText(book + " " + ++position);
 
             return view;

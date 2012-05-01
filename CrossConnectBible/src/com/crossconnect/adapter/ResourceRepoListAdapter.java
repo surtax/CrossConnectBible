@@ -51,10 +51,17 @@ public class ResourceRepoListAdapter extends ArrayAdapter<ResourceRepository> {
         }
 
         final ResourceRepository item = getItem(position);
-//        ((ImageView)view.findViewById(R.id.icon)).setImageDrawable(item.getIcon());
+        
         ((TextView)view.findViewById(R.id.text)).setText(item.getChurchName());
         final ImageView following = ((ImageView)view.findViewById(R.id.following));
-    	SharedPreferences settings = ctx.getSharedPreferences("APP SETTINGS", Context.MODE_PRIVATE);
+
+		if (item.getChurchName().equals("Coming Soon...")) {
+			((ImageView)view.findViewById(R.id.icon)).setImageResource(R.drawable.icon_orb_coming);
+			following.setVisibility(View.GONE);
+		}
+
+        
+        SharedPreferences settings = ctx.getSharedPreferences("APP SETTINGS", Context.MODE_PRIVATE);
         boolean currentFollow = settings.getBoolean(item.getChurchName(), true);
 
         if (currentFollow) {
@@ -68,28 +75,23 @@ public class ResourceRepoListAdapter extends ArrayAdapter<ResourceRepository> {
 
 			@Override
 			public void onClick(View v) {
-				
-				
-				if (!item.getChurchName().equals("Coming Soon...")) {
-			    	SharedPreferences settings = ctx.getSharedPreferences("APP SETTINGS", Context.MODE_PRIVATE);
-			        boolean currentFollow = settings.getBoolean(item.getChurchName(), true);
-			        SharedPreferences.Editor editor = settings.edit();
-			        
-			        //Swap to other value
-			        currentFollow = !currentFollow;
-			        editor.putBoolean(item.getChurchName(), currentFollow);
-	
-			        // Commit the edits!
-			        editor.commit();
-	
-			        if (currentFollow) {
-			        	following.setImageResource(R.drawable.following_selector);
-			        } else {
-			        	following.setImageResource(R.drawable.follow_selector);
-			        }
-				}
+		    	SharedPreferences settings = ctx.getSharedPreferences("APP SETTINGS", Context.MODE_PRIVATE);
+		        boolean currentFollow = settings.getBoolean(item.getChurchName(), true);
+		        SharedPreferences.Editor editor = settings.edit();
+		        
+		        //Swap to other value
+		        currentFollow = !currentFollow;
+		        editor.putBoolean(item.getChurchName(), currentFollow);
+
+		        // Commit the edits!
+		        editor.commit();
+
+		        if (currentFollow) {
+		        	following.setImageResource(R.drawable.following_selector);
+		        } else {
+		        	following.setImageResource(R.drawable.follow_selector);
+		        }
 			}
-        	
         });
         return view;
     }
