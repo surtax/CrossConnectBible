@@ -60,7 +60,10 @@ public class CrossConnectServerService {
 	    List<ResourceRepository> repos = new ArrayList<ResourceRepository>();
 	    
 		repos.add(new ResourceRepository("Desiring God", "Description"));
-	    return repos;
+		repos.add(new ResourceRepository("Coming Soon...", "Description"));
+		repos.add(new ResourceRepository("Coming Soon...", "Description"));
+
+		return repos;
 	}
 
 

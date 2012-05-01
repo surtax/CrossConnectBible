@@ -40,6 +40,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.animation.AnimationUtils;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -85,7 +86,8 @@ public class ResourceFragment extends ListFragment implements LoaderManager.Load
 
     public void updateResources(BibleText loadingBibleText) {
     	this.loadingBibleText = loadingBibleText;
-    	if (mAdapter != null && (bibleText == null || (bibleText != null && !loadingBibleText.getShortReferenceBookChapterVerse().equals(bibleText)))) {
+    	//Update if the new bibleText is different
+    	if (mAdapter != null && (bibleText == null || (bibleText != null && !loadingBibleText.getShortReferenceBookChapterVerse().equals(bibleText.getShortReferenceBookChapterVerse())))) {
             Bundle bundle = new Bundle();
             bundle.putParcelable("BibleText", loadingBibleText);
             mAdapter.clear();
@@ -435,6 +437,9 @@ public class ResourceFragment extends ListFragment implements LoaderManager.Load
         // Set the new data in the adapter.
         mAdapter.setData(data);
         mAdapter.notifyDataSetChanged();
+        
+        // Animate so that the list fades in
+        getActivity().findViewById(android.R.id.list).startAnimation(AnimationUtils.loadAnimation(getActivity(), android.R.anim.fade_in));
         bibleText = loadingBibleText;
         progress.setVisibility(View.GONE);
         

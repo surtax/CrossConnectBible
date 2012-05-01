@@ -34,6 +34,7 @@ Direct copy of notes_column only it uses the personalnoteseditor instead of the 
                     android:id="@+id/notes_edit_text"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
+                    android:inputType="textCapSentences|textMultiLine"
                     android:background="@android:color/transparent"
                     android:fadingEdge="vertical"
                     android:gravity="top"

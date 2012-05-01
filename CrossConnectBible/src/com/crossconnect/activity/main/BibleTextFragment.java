@@ -297,10 +297,12 @@ public class BibleTextFragment extends Fragment implements LoaderManager.LoaderC
      * Update bible text with new BibleText TODO: translation is current static
      */
     public void updateBibleTextView(final BibleText bibleText) {
+
+    	loadSettings();
+
     	
     	if (bibleTextView != null && !bibleText.equals(bibleTextView.getBibleText())) {
 
-	    	loadSettings();
 	        bibleTextView.setBibleText(bibleText);
 	        
 	//        String note = notesService.getNotes(bibleText.getKey());

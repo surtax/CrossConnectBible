@@ -12,6 +12,7 @@ import android.view.Window;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.ProgressBar;
@@ -28,6 +29,8 @@ public class ArticleActivity extends Activity {
 	private String verse;
 	
 	ProgressBar progressBar;
+	
+	private ImageButton shareButton;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -38,9 +41,23 @@ public class ArticleActivity extends Activity {
 		verse = getIntent().getExtras().getString("verse");
 
 		getWindow().requestFeature(Window.FEATURE_PROGRESS);
-		setContentView(R.layout.article);
+		setContentView(R.layout.activity_article);
 		setProgressBarVisibility(true);
 		webView = (WebView) findViewById(R.id.webView);
+		shareButton = (ImageButton) findViewById(R.id.menu_button_share);
+		
+		shareButton.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+                Intent sendMailIntent = new Intent(Intent.ACTION_SEND);
+                sendMailIntent.putExtra(Intent.EXTRA_SUBJECT, "CrossConnect Resource for " + verse);
+                sendMailIntent.putExtra(Intent.EXTRA_TEXT, "Check out this great article on " + verse + " " + url);
+                sendMailIntent.setType("text/plain");
+                startActivity(Intent.createChooser(sendMailIntent, "Share using..."));
+			}
+		});
+		
 		ImageView up = (ImageView) findViewById(R.id.title_bar_icon);
 		up.setOnClickListener(new OnClickListener() {
 

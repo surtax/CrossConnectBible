@@ -23,8 +23,7 @@
                 <TextView android:id="@+id/header_title" android:text="Loading..." android:layout_height="wrap_content" android:layout_width="wrap_content" android:textColor="@color/dg_text_gray" android:textSize="22sp" android:paddingTop="3dp"></TextView>
             </LinearLayout>> 
             <LinearLayout android:id="@+id/linearLayout2" android:layout_height="fill_parent" android:layout_width="fill_parent" android:gravity="center_vertical|right">
-                <ImageButton style="@style/TitleIcon" android:background="@drawable/ic_menu_chat_dashboard" android:id="@+id/menu_button_tabs"></ImageButton>
-                <ImageButton style="@style/TitleIcon" android:background="@drawable/ic_menu_copy_holo_dark" android:id="@+id/menu_button_windows"></ImageButton>
+                <ImageButton style="@style/TitleIcon" android:background="@drawable/ic_menu_share" android:id="@+id/menu_button_share"/>
             </LinearLayout>
      </LinearLayout>
     <ProgressBar android:id="@+id/progress"

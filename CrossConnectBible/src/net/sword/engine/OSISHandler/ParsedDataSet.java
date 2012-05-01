@@ -11,6 +11,7 @@ import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 import android.text.style.AbsoluteSizeSpan;
 import android.text.style.ForegroundColorSpan;
+import android.text.style.RelativeSizeSpan;
 import android.text.style.StyleSpan;
 import android.text.style.SuperscriptSpan;
 
@@ -182,7 +183,7 @@ public class ParsedDataSet {
 			}
 		}
 		int length = num.length();
-		sb.setSpan(new AbsoluteSizeSpan(12), sb.length() - length, sb.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+		sb.setSpan(new RelativeSizeSpan((float) 0.5), sb.length() - length, sb.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
 		sb.setSpan(new ForegroundColorSpan(Color.RED), sb.length() - length, sb.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
 		sb.setSpan(new SuperscriptSpan(), sb.length() - length, sb.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
 

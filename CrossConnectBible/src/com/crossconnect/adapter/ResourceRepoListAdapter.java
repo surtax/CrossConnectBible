@@ -2,8 +2,6 @@ package com.crossconnect.adapter;
 
 import java.util.List;
 
-import utility.SharedPreferencesHelper;
-
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.view.LayoutInflater;
@@ -11,12 +9,11 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.TextView;
 import android.widget.ImageView;
+import android.widget.TextView;
 
-import com.crossconnect.model.BibleText;
-import com.crossconnect.model.ResourceRepository;
 import com.crossconnect.actions.R;
+import com.crossconnect.model.ResourceRepository;
 
 public class ResourceRepoListAdapter extends ArrayAdapter<ResourceRepository> {
     private final LayoutInflater mInflater;
@@ -71,23 +68,26 @@ public class ResourceRepoListAdapter extends ArrayAdapter<ResourceRepository> {
 
 			@Override
 			public void onClick(View v) {
-		    	SharedPreferences settings = ctx.getSharedPreferences("APP SETTINGS", Context.MODE_PRIVATE);
-		        boolean currentFollow = settings.getBoolean(item.getChurchName(), true);
-		        SharedPreferences.Editor editor = settings.edit();
-		        
-		        //Swap to other value
-		        currentFollow = !currentFollow;
-		        editor.putBoolean(item.getChurchName(), currentFollow);
-
-		        // Commit the edits!
-		        editor.commit();
-
-		        if (currentFollow) {
-		        	following.setImageResource(R.drawable.following_selector);
-		        } else {
-		        	following.setImageResource(R.drawable.follow_selector);
-		        }
-
+				
+				
+				if (!item.getChurchName().equals("Coming Soon...")) {
+			    	SharedPreferences settings = ctx.getSharedPreferences("APP SETTINGS", Context.MODE_PRIVATE);
+			        boolean currentFollow = settings.getBoolean(item.getChurchName(), true);
+			        SharedPreferences.Editor editor = settings.edit();
+			        
+			        //Swap to other value
+			        currentFollow = !currentFollow;
+			        editor.putBoolean(item.getChurchName(), currentFollow);
+	
+			        // Commit the edits!
+			        editor.commit();
+	
+			        if (currentFollow) {
+			        	following.setImageResource(R.drawable.following_selector);
+			        } else {
+			        	following.setImageResource(R.drawable.follow_selector);
+			        }
+				}
 			}
         	
         });
