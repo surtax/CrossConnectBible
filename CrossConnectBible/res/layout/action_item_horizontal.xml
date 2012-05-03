@@ -4,22 +4,23 @@
 	android:orientation="vertical"
 	android:layout_width="fill_parent"
 	android:layout_height="wrap_content"
+	android:minWidth="80dp"
 	android:gravity="center_vertical|center_horizontal"
 	android:paddingTop="0dip"
 	android:paddingBottom="0dip"
-	android:paddingLeft="20dip"
-	android:paddingRight="20dip" 
+	android:paddingLeft="5dip"
+	android:paddingRight="5dip" 
 	android:clickable="true"
 	android:background="@drawable/quickaction_slider_btn">
 
 	<ImageView
 		android:id="@+id/icon" 
-		android:layout_width="fill_parent" 
-		android:layout_height="wrap_content"/>
+		android:layout_width="28dp" 
+		android:layout_height="28dp"/>
 
 	<TextView 
 		android:id="@+id/title"
-		android:layout_width="fill_parent" 
+		android:layout_width="wrap_content" 
 		android:layout_height="fill_parent" 
 		android:gravity="center_vertical|center_horizontal"
 		android:textSize="12sp"

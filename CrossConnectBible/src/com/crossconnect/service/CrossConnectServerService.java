@@ -5,6 +5,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
+import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,8 +32,13 @@ public class CrossConnectServerService {
 
 		book = book.replaceAll(" ", "");
 
-		String rawJSON = crossConnectConnector(SERVER_URL + book + ".json");
-		// System.out.println(contents);
+		String rawJSON;
+		try {
+			rawJSON = crossConnectConnector(SERVER_URL + book + ".json");
+		} catch (Exception e) {
+			//Likely to be no internet but if any connection issue just return null
+			return null; 
+		}
 
 		
 		List<OnlineAudioResource> audios = new ArrayList<OnlineAudioResource>();
@@ -49,6 +55,7 @@ public class CrossConnectServerService {
 			}
 		} catch (Exception e) {
 			// TODO:need to exception handle here
+			Log.e("CrossConnectServer","JSON Exception", e);
 		}
 
 		return audios;
@@ -67,7 +74,7 @@ public class CrossConnectServerService {
 	}
 
 
-	private static String crossConnectConnector(String url) {
+	private static String crossConnectConnector(String url) throws UnknownHostException {
 		StringBuilder sb = new StringBuilder();
 		try {
 			URL yahoo = new URL(url);
@@ -78,9 +85,11 @@ public class CrossConnectServerService {
 			while ((inputLine = in.readLine()) != null)
 				sb.append(inputLine);
 			in.close();
+		} catch (UnknownHostException e) {
+			Log.e("CrossConnectServer","Invalid URL or No Internet", e);
+			throw e;
 		} catch (Exception e) {
 			Log.e("CrossConnectServer","Connection Issue", e);
-
 		}
 		return sb.toString();
 

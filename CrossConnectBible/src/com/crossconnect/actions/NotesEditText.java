@@ -145,7 +145,7 @@ public class NotesEditText extends EditText {
 	
 	@Override
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
-		Log.e("NotesEdit", "KeyDown");
+		Log.i("NotesEdit", "KeyDown");
 		return super.onKeyDown(keyCode, event);
 	}
 	

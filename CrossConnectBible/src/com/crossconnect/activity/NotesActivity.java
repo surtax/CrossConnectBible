@@ -1,22 +1,30 @@
 package com.crossconnect.activity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.TabHost;
 import android.widget.TextView;
 
 import com.crossconnect.actions.R;
 import com.crossconnect.activity.notemanager.NoteManagerBibleNotesFragment;
 import com.crossconnect.activity.notemanager.NoteManagerPersonalNotesFragment;
+import com.crossconnect.activity.notemanager.PersonalNotesActivity;
 import com.crossconnect.swipeytabs.SwipeyTabFragment;
 import com.crossconnect.swipeytabs.SwipeyTabs;
+import com.crossconnect.swipeytabs.SwipeyTabsActionBarIcons;
 import com.crossconnect.swipeytabs.SwipeyTabsAdapter;
 
 public class NotesActivity extends FragmentActivity {
@@ -26,7 +34,7 @@ public class NotesActivity extends FragmentActivity {
 		"PERSONAL",
 	};
 
-	private SwipeyTabs mTabs;
+	private SwipeyTabsActionBarIcons mTabs;
 	private ViewPager mViewPager;
 	private SwipeyTabsPagerAdapter adapter;
 	
@@ -37,22 +45,32 @@ public class NotesActivity extends FragmentActivity {
 		setContentView(R.layout.activity_notes_manager);
 
 		mViewPager = (ViewPager) findViewById(R.id.viewpager);
-		mTabs = (SwipeyTabs) findViewById(R.id.swipeytabs);
+		mTabs = (SwipeyTabsActionBarIcons) findViewById(R.id.swipeytabs);
+		View actionButton = findViewById(R.id.menu_button_edit_document);
+		actionButton.setOnClickListener(new OnClickListener() {
 
+			@Override
+			public void onClick(View v) {
+	            Intent intent = new Intent(NotesActivity.this, PersonalNotesActivity.class);
+	    		startActivity(intent);
+			}});
+		List<View> col1Icons = new ArrayList<View>();
+		col1Icons.add(actionButton);
+		mTabs.addIcons(PERSONAL_NOTES, col1Icons);
+		
 		adapter = new SwipeyTabsPagerAdapter(this,
 				getSupportFragmentManager());
 		mViewPager.setAdapter(adapter);
 		mTabs.setAdapter(adapter);
 		mViewPager.setOnPageChangeListener(mTabs);
-		mViewPager.setCurrentItem(0);
+		mViewPager.setCurrentItem(BIBLE_NOTES);
 	}
 	
 	public Fragment getFragment(int position) {
 		return adapter.getItem(position);
 	}
 
-	private class SwipeyTabsPagerAdapter extends FragmentPagerAdapter implements
-			SwipeyTabsAdapter {
+	private class SwipeyTabsPagerAdapter extends FragmentPagerAdapter implements SwipeyTabsAdapter {
 		
 		private final Context mContext;
 
@@ -64,9 +82,9 @@ public class NotesActivity extends FragmentActivity {
 
 		@Override
 		public Fragment getItem(int position) {
-			if (position == 0) {
+			if (position == BIBLE_NOTES) {
 				return new NoteManagerBibleNotesFragment();
-			} else if (position == 1) {
+			} else if (position == PERSONAL_NOTES) {
 				return new NoteManagerPersonalNotesFragment();				
 			}
 			return SwipeyTabFragment.newInstance(TITLES[position]);
@@ -91,7 +109,10 @@ public class NotesActivity extends FragmentActivity {
 		}
 
 	}
-
+	
+    private static final int BIBLE_NOTES = 0;
+    private static final int PERSONAL_NOTES = 1;
+    
 }
 
     

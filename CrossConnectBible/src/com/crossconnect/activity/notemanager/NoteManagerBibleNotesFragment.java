@@ -36,6 +36,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.PopupWindow.OnDismissListener;
 import android.widget.TextView;
@@ -195,7 +196,6 @@ public class NoteManagerBibleNotesFragment extends ListFragment implements Loade
         @Override public View getView(int position, View convertView, ViewGroup parent) {
             View view;
 
-            //Add the "Add new note" row 
             if (convertView == null) {
                 view = mInflater.inflate(R.layout.list_item_icon_text_two_line, parent, false);
             } else {
@@ -204,7 +204,7 @@ public class NoteManagerBibleNotesFragment extends ListFragment implements Loade
 
 
             Note item = getItem(position);
-//              ((ImageView)view.findViewById(R.id.icon)).setImageDrawable(item.getIcon());
+        	((ImageView)view.findViewById(R.id.icon)).setImageResource(R.drawable.icon_notes);
             ((TextView)view.findViewById(R.id.text_line_1)).setText(item.getBook() + item.getChapter());
             ((TextView)view.findViewById(R.id.text_line_2)).setText(item.getText());
             
@@ -258,13 +258,13 @@ public class NoteManagerBibleNotesFragment extends ListFragment implements Loade
     	
         final ActionItem openAction = new ActionItem();
         
-        openAction.setTitle("Open");
-        openAction.setIcon(getResources().getDrawable(R.drawable.ic_action_search));
+        openAction.setTitle("Read");
+        openAction.setIcon(getResources().getDrawable(R.drawable.icon_read));
 
         final ActionItem deleteAction = new ActionItem();
         
         deleteAction.setTitle("Delete");
-        deleteAction.setIcon(getResources().getDrawable(R.drawable.ic_action_delete));
+        deleteAction.setIcon(getResources().getDrawable(R.drawable.icon_close));
         
         final ActionItem shareAction = new ActionItem();
         

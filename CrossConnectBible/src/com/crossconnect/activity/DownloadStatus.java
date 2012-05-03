@@ -4,6 +4,9 @@ package com.crossconnect.activity;
 import net.sword.engine.sword.SwordDocumentFacade;
 
 import org.crosswire.common.progress.Progress;
+import org.crosswire.common.util.Reporter;
+import org.crosswire.common.util.ReporterEvent;
+import org.crosswire.common.util.ReporterListener;
 
 import utility.SharedPreferencesHelper;
 
@@ -30,9 +33,38 @@ public class DownloadStatus extends ProgressActivityBase {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        BibleDataHelper.installJSwordErrorReportListener();
+
+        Reporter.addReporterListener(new ReporterListener() {
+			@Override
+			public void reportException(final ReporterEvent ev) {
+				showMsg(ev);
+			}
+
+			@Override
+			public void reportMessage(final ReporterEvent ev) {
+				showMsg(ev);
+			}
+			
+			private void showMsg(ReporterEvent ev) {
+//				final String msg = "Doh! Something's gone wrong, sorry about this :(";
+				String msg;
+				
+				if (ev==null) {
+					msg = "Doh! Something's gone wrong, sorry about this :(";
+				} else if (ev.getMessage() != null && ev.getMessage().length() > 0) {
+					msg = ev.getMessage();
+				} else if (ev.getException() !=null && ev.getException().getMessage() != null && ev.getException().getMessage().length() > 0) {
+					msg = ev.getException().getMessage();
+				} else {
+					msg = "Doh! Something's gone wrong, sorry about this :(";
+				}
+				
+				Log.e("Install Reporter", msg);
+
+			}
+        });
+
         
-        ReportListenerService.getInstance(this);
         
         
         Log.i(TAG, "Displaying "+TAG+" view");
@@ -43,7 +75,6 @@ public class DownloadStatus extends ProgressActivityBase {
 
         Log.d(TAG, "Finished displaying Download Status view");
     }
-
     
     @Override
 	protected void jobFinished(Progress job) {

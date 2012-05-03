@@ -3,6 +3,7 @@ package com.crossconnect.activity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -10,6 +11,9 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
 import android.webkit.WebChromeClient;
+import android.webkit.WebSettings.LayoutAlgorithm;
+import android.webkit.WebSettings.PluginState;
+import android.webkit.WebSettings.ZoomDensity;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ImageButton;
@@ -72,6 +76,10 @@ public class ArticleActivity extends Activity {
 		((TextView) findViewById(R.id.header_title)).setText(verse) ;
 
 		webView.getSettings().setJavaScriptEnabled(true);
+		webView.getSettings().setLoadWithOverviewMode(true);
+		webView.getSettings().setUseWideViewPort(true);
+		webView.getSettings().setBuiltInZoomControls(true);
+		webView.getSettings().setPluginState(PluginState.ON);
 
 		progressBar = (ProgressBar) findViewById(R.id.progress);
 		
@@ -83,6 +91,8 @@ public class ArticleActivity extends Activity {
 				// The progress meter will automatically disappear when we reach 100%
 				progressBar.setProgress(progress);
 				if (progress == 100) {
+//					webView.stopLoading();
+//					Class.forName("android.webkit.WebView").getMethod("onPause", (Class[]) null).invoke(webView, (Object[]) null);
 					progressBar.setVisibility(View.GONE);
 				}
 			}
@@ -90,6 +100,18 @@ public class ArticleActivity extends Activity {
 		webView.setWebViewClient(new WebViewClient() {
 			   public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
 			     Toast.makeText(activity, "Oh no! " + description, Toast.LENGTH_SHORT).show();
+			   }
+			   
+			   @Override
+			   public boolean shouldOverrideUrlLoading(WebView view, String url) {
+				   if (url.endsWith(".mp3")) {
+					   //Dont download mp3 in webview
+					   Log.i("ArticleActivity","Mp3 Download Blocked");
+					   return true;
+				   } else {
+					   return super.shouldOverrideUrlLoading(view, url);
+				   }
+				   
 			   }
 			 });
 

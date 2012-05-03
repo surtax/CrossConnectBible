@@ -39,6 +39,28 @@ Column which contains the notes editor
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
         </LinearLayout>
+        
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:id="@+id/no_internet_msg_layout"
+            android:orientation="vertical" >
+            <TextView android:text="Sorry could we check the internet and try again?"
+                android:textSize="18sp"
+				android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <Button android:id="@+id/retry_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_marginTop="48dp"
+                android:text="Retry"
+                />
+        </LinearLayout>
 
         <!--
      		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"

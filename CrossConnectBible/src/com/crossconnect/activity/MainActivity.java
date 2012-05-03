@@ -147,6 +147,7 @@ public class MainActivity extends FragmentActivity {
         ((ImageButton) findViewById(R.id.menu_button_notes)).setOnClickListener(new OnClickListener(){
             @Override
             public void onClick(View v) {
+            	saveCurrentTab();
                 Intent intent = new Intent(MainActivity.this, NotesActivity.class);
                 intent.putExtra("Translation", bibleText.getTranslation().getInitials());
                 startActivityForResult(intent, NOTES_SELECT_CODE);    
@@ -200,9 +201,7 @@ public class MainActivity extends FragmentActivity {
             @Override
             public void onClick(View v) {
             	
-            	Editor editor = getSharedPreferences("APP SETTINGS", Context.MODE_PRIVATE).edit();
-            	editor.putString(SharedPreferencesHelper.CURRENT_TAB, mTabHost.getCurrentTabTag());
-            	editor.commit();
+            	saveCurrentTab();
                 
                 //TODO: can we pass the actual BibleText?
                 Intent intent = new Intent(MainActivity.this, ChapterSelectionActivity.class);
@@ -217,7 +216,7 @@ public class MainActivity extends FragmentActivity {
         final ActionItem settingsAction = new ActionItem();
         
         settingsAction.setTitle("Settings");
-        settingsAction.setIcon(getResources().getDrawable(R.drawable.ic_sysbar_quicksettings));
+        settingsAction.setIcon(getResources().getDrawable(R.drawable.icon_gear));
 
         final ActionItem accAction = new ActionItem();
         
@@ -367,13 +366,17 @@ public class MainActivity extends FragmentActivity {
         int windowsReqCode = requestCode & 0xffff;
         if (resultCode == Activity.RESULT_OK && (requestCode == CHAPTER_SELECT_CODE || windowsReqCode == WINDOW_SELECT_CODE || requestCode == NOTES_SELECT_CODE)) {
         	updateBibleText((BibleText) data.getParcelableExtra("BibleText"));
-
-        	mTabHost.setCurrentTabByTag(getSharedPreferences("APP SETTINGS", Context.MODE_PRIVATE).getString(SharedPreferencesHelper.CURRENT_TAB, BIBLE_TAG));
-            
+        	
             if (windowsReqCode == WINDOW_SELECT_CODE) {
                 windowId = data.getExtras().getInt("WindowId");
                 Log.i("Main", "Window ID Received" + windowId);
+                //If window select then default go back to BIBLE_TAG column
+                mTabHost.setCurrentTabByTag(BIBLE_TAG);
+            } else {
+            	//Everything else go back to original tab
+            	mTabHost.setCurrentTabByTag(getSharedPreferences("APP SETTINGS", Context.MODE_PRIVATE).getString(SharedPreferencesHelper.CURRENT_TAB, BIBLE_TAG));
             }
+            
         }  else if (resultCode == Activity.RESULT_OK && requestCode == TRANSLATION_SELECT_CODE) {
             bibleText.setTranslation((String) data.getExtras().get("Translation"));
             updateBibleText((BibleText) data.getParcelableExtra("BibleText"));
@@ -418,6 +421,12 @@ public class MainActivity extends FragmentActivity {
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putString(DEFAULT_TAB, mTabHost.getCurrentTabTag());
+    }
+    
+    private void saveCurrentTab() {
+    	Editor editor = getSharedPreferences("APP SETTINGS", Context.MODE_PRIVATE).edit();
+    	editor.putString(SharedPreferencesHelper.CURRENT_TAB, mTabHost.getCurrentTabTag());
+    	editor.commit();
     }
     
     private NotesService notesService;

@@ -26,19 +26,8 @@
             <LinearLayout android:id="@+id/header_box" android:layout_height="fill_parent" android:layout_width="wrap_content" android:orientation="vertical" android:gravity="center_vertical"> 
                 <TextView android:id="@+id/header_title" android:text="Notes" android:layout_height="wrap_content" android:layout_width="wrap_content" android:textColor="@color/dg_text_gray" android:textSize="22sp" android:paddingTop="3dp"></TextView>
             </LinearLayout>> 
-        <LinearLayout android:id="@+id/linearLayout2" android:layout_height="fill_parent" android:layout_width="fill_parent" android:gravity="right">
-<!--             <View android:layout_height="fill_parent" android:layout_width="1dp" android:background="@drawable/gradient_black_white_black" android:layout_marginLeft="1dp" android:layout_marginRight="1dp"/>
-            <ImageButton style="@style/TitleIcon" android:background="@android:drawable/ic_menu_slideshow" android:id="@+id/menu_button_translations"></ImageButton>
-            <View android:layout_height="fill_parent" android:layout_width="1dp" android:background="@drawable/gradient_black_white_black" android:layout_marginLeft="1dp" android:layout_marginRight="1dp"/>
-            <ImageButton style="@style/TitleIcon" android:background="@drawable/menu_windows" android:id="@+id/menu_button_windows"></ImageButton>
-            <View android:layout_height="fill_parent" android:layout_width="1dp" android:background="@drawable/gradient_black_white_black" android:layout_marginLeft="1dp" android:layout_marginRight="1dp"/>
-            <ImageButton style="@style/TitleIcon" android:id="@+id/menu_button_star" android:background="@android:drawable/ic_menu_preferences"></ImageButton>
-            <ImageButton style="@style/TitleIcon" android:background="@drawable/ic_launcher" android:id="@+id/menu_button_browse_resources"/>
-            <ImageButton style="@style/TitleIcon" android:background="@android:drawable/ic_menu_myplaces" android:id="@+id/menu_button_churches"></ImageButton>
-            <ImageButton style="@style/TitleIcon" android:background="@android:drawable/ic_menu_sort_by_size" android:id="@+id/menu_button_browse_audio"/>
-            <ImageButton style="@style/TitleIcon" android:background="@drawable/ic_launcher" android:id="@+id/menu_button_audio"></ImageButton>
-            <ImageButton style="@style/TitleIcon" android:background="@android:drawable/ic_menu_sort_by_size" android:id="@+id/menu_button_notes"></ImageButton>
- -->            <ImageButton android:layout_height="36sp" android:layout_width="36sp" android:background="@android:drawable/ic_menu_edit" android:id="@+id/menu_button_notes_lock"></ImageButton>
+        <LinearLayout android:id="@+id/linearLayout2" android:layout_height="fill_parent" android:layout_width="fill_parent" android:gravity="right|center_vertical">
+			<ImageButton android:layout_height="36sp" android:layout_width="36sp" android:background="@android:drawable/ic_menu_edit" android:id="@+id/menu_button_notes_lock"></ImageButton>
         </LinearLayout>
     </LinearLayout>
     <View android:layout_width="fill_parent" android:layout_height="2sp" android:background="@color/dg_red"/>

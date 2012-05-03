@@ -34,6 +34,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.PopupWindow.OnDismissListener;
 import android.widget.TextView;
@@ -194,23 +195,16 @@ public class NoteManagerPersonalNotesFragment extends ListFragment implements Lo
         @Override public View getView(int position, View convertView, ViewGroup parent) {
             View view;
 
-            //Add the "Add new note" row 
             if (convertView == null) {
-                view = mInflater.inflate(R.layout.list_item_icon_text_two_line, parent, false);
-                addRow = mInflater.inflate(R.layout.list_item_icon_add_row, parent, false);
+                view = mInflater.inflate(R.layout.list_item_icon_text, parent, false);
             } else {
                 view = convertView;
             }
 
 
-            if (position == this.getCount()-1) {
-            	return addRow;
-            } else {
-                Note item = getItem(position);
-//              ((ImageView)view.findViewById(R.id.icon)).setImageDrawable(item.getIcon());
-//              ((TextView)view.findViewById(R.id.text_line_1)).setText(item.getBook() + item.getChapter());
-              ((TextView)view.findViewById(R.id.text_line_2)).setText(item.getText());
-            }
+			Note item = getItem(position);
+			((ImageView) view.findViewById(R.id.icon)).setImageResource(R.drawable.icon_notes);
+			((TextView) view.findViewById(R.id.text)).setText(item.getText());
             
             return view;
         }
@@ -254,14 +248,6 @@ public class NoteManagerPersonalNotesFragment extends ListFragment implements Lo
 
     @Override public void onListItemClick(ListView l, View v, int pos, long id) {
     	
-    	//If it is the add new note row
-    	if (pos == mAdapter.getCount()-1) {
-            Intent intent = new Intent(getActivity(), PersonalNotesActivity.class);
-//            intent.putExtra(PersonalNotesEditorFragment.NOTE_BUNDLE_ID,0);
-    		startActivity(intent);
-    		return;
-    	}
-    	
     	final int position = pos;
     	
         //Get the corresponding resource
@@ -270,13 +256,13 @@ public class NoteManagerPersonalNotesFragment extends ListFragment implements Lo
     	
         final ActionItem openAction = new ActionItem();
         
-        openAction.setTitle("Open");
-        openAction.setIcon(getResources().getDrawable(R.drawable.ic_action_search));
+        openAction.setTitle("Read");
+        openAction.setIcon(getResources().getDrawable(R.drawable.icon_read));
 
         final ActionItem deleteAction = new ActionItem();
         
         deleteAction.setTitle("Delete");
-        deleteAction.setIcon(getResources().getDrawable(R.drawable.ic_action_delete));
+        deleteAction.setIcon(getResources().getDrawable(R.drawable.icon_close));
         
         final ActionItem shareAction = new ActionItem();
         
@@ -285,9 +271,6 @@ public class NoteManagerPersonalNotesFragment extends ListFragment implements Lo
 
     	
         final QuickActionHorizontal mQuickAction  = new QuickActionHorizontal(v);
-        
-        final String text               = "blah";
-        
         
         openAction.setOnClickListener(new OnClickListener() {
             @Override

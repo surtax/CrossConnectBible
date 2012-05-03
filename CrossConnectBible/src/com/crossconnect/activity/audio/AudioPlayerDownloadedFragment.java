@@ -55,12 +55,12 @@ public class AudioPlayerDownloadedFragment extends ListFragment implements Loade
     private static ResourceService resourceService;        
     
     // This is the Adapter being used to display the list's data.
-    ResourceListAdapter mAdapter;
+    DownloadedResourceListAdapter mAdapter;
 
-    public static class ResourceListAdapter extends ArrayAdapter<OnlineAudioResource> {
+    public static class DownloadedResourceListAdapter extends ArrayAdapter<OnlineAudioResource> {
         private final LayoutInflater mInflater;
 
-        public ResourceListAdapter(Context context) {
+        public DownloadedResourceListAdapter(Context context) {
             super(context, R.layout.list_item_text);
             mInflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         }
@@ -361,7 +361,7 @@ public class AudioPlayerDownloadedFragment extends ListFragment implements Loade
 
 
         // Create an empty adapter we will use to display the loaded data.
-        mAdapter = new ResourceListAdapter(getActivity());
+        mAdapter = new DownloadedResourceListAdapter(getActivity());
         setListAdapter(mAdapter);
 
         
