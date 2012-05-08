@@ -8,7 +8,7 @@
             <TextView android:id="@+id/header_title" android:text="Windows" android:layout_height="wrap_content" android:layout_width="wrap_content" android:textColor="@color/dg_text_gray" android:textSize="22sp" android:paddingTop="3dp"></TextView>
         </LinearLayout>> 
         <LinearLayout android:id="@+id/linearLayout2" android:layout_height="fill_parent" android:layout_width="fill_parent" android:gravity="center_vertical|right">
-             <ImageButton style="@style/TitleIcon" android:background="@android:drawable/ic_menu_add" android:id="@+id/menu_button_add_window"></ImageButton>
+             <ImageButton style="@style/TitleIcon" android:background="@drawable/icon_add" android:id="@+id/menu_button_add_window"></ImageButton>
         </LinearLayout>
     </LinearLayout>
     <View android:layout_width="fill_parent" android:layout_height="2sp" android:background="@color/dg_red"/>

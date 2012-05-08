@@ -33,7 +33,7 @@
             android:textSize="18sp"
             android:maxLines="1"/>
 		
-	    	<ImageButton android:background="@drawable/close_icon" android:layout_height="20sp" android:layout_width="20sp" android:id="@+id/close_window"></ImageButton>
+	    	<ImageButton android:background="@drawable/icon_close" android:layout_height="20sp" android:layout_width="20sp" android:id="@+id/close_window"></ImageButton>
 		</LinearLayout>
 	    <TextView 
 	       android:background="@color/dg_gray"
