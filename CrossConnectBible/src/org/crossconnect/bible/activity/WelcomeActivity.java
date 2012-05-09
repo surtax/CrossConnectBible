@@ -18,6 +18,7 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.StrictMode;
+import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -27,7 +28,7 @@ import android.widget.ListView;
 
 import org.crossconnect.bible.R;
 
-public class WelcomeActivity extends ListActivity{
+public class WelcomeActivity extends FragmentActivity{
 
 	DownloadManager installService;
 	
@@ -53,105 +54,8 @@ public class WelcomeActivity extends ListActivity{
     		StrictMode.setThreadPolicy(policy);
         }
 
-        
-        // Tell the list view which view to display when the list is empty
-        getListView().setEmptyView(findViewById(R.id.empty));
-        
-//        BibleDataHelper.installJSwordErrorReportListener();
-        
         forceBasicFlow = SwordDocumentFacade.getInstance().getBibles().size()==0;
-        
-        installService = new DownloadManager();
-
-			try {
-				Log.e("BookManager", "Getting avialable books");
-				List<Book > availableBooks= installService.getDownloadableBooks(SUPPORTED_DOCUMENT_TYPES, CROSSWIRE_REPOSITORY, false);
-			List<Book> installedBooks = SwordDocumentFacade.getInstance().getDocuments();
-			allBooks = new ArrayList<Book>(installedBooks);
-			allBooks.addAll(availableBooks);
-
-			bibles = new ArrayList<Book>();
-			
-			for (Book book : allBooks) {
-				if(BookCategory.BIBLE.equals(book.getBookCategory())){
-					bibles.add(book);
-				}
-	        }
-			
-			
-			
-			
-			Collections.sort(bibles);
-			
-        List<String> bibleNames = new ArrayList<String>();
-        for (Book book : bibles) {
-        	bibleNames.add(book.getInitials());
-        }
-//        Collections.sort(booksName);
-        
-        // Use an existing ListAdapter that will map an array
-        // of strings to TextViews
-        setListAdapter(new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_1, bibleNames.toArray(new String[0])));
-        getListView().setTextFilterEnabled(true);
-        
-        final ListView listView = getListView();
-        
-        listView.setOnItemClickListener(new OnItemClickListener(){
-
-			public void onItemClick(AdapterView<?> parent, View view, int position,
-					long id) {
-//				Log.e("BookManager", "Click");
-//				Intent i = new Intent ();
-//				i.putExtra("Translation", ((TextView) view).getText());
-//				setResult(RESULT_OK, i);
-//				finish();				
-
-				
-				Log.d("Installer", "Installing " + bibles.get(position).getInitials());
-				doDownload(bibles.get(position));
-				
-//				try {
-//				crossWireInstaller.install(availableBooks.get(position));
-//			} catch (InstallException e) {
-//				Log.e("BookManager", "Install Book", e);
-//			}
-
-			}
-        	
-        });
-        
-			} catch (InstallException e) {
-				Log.e("BookManager", "Get avialable books", e);
-			}
-
-
 
 	}
-	
-	private void doDownload(Book document) {
-
-    	try {
-    		Log.e("DoDownload", "Starting Download");
-    		// the download happens in another thread
-    		SwordDocumentFacade.getInstance().downloadDocument(document);
-	    	
-	    	Intent intent;
-			if (forceBasicFlow) {
-	    		intent = new Intent(this, DownloadStatus.class);
-				//	    		intent = new Intent(this, EnsureBibleDownloaded.class);
-//	    		// finish this so when EnsureDalogDownload finishes we go straight back to StartupActivity which will start MainBibleActivity
-//	    		finish();
-	    	} else {
-	    		intent = new Intent(this, DownloadStatus.class);
-	    	}
-        	startActivityForResult(intent, 1);
-
-    	} catch (Exception e) {
-    		Log.e("BookManagerActivity", "Error on attempt to download", e);
-    	}
-
-    }
-
 
 }

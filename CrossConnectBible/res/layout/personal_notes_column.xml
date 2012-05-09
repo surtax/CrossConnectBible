@@ -30,7 +30,7 @@ Direct copy of notes_column only it uses the personalnoteseditor instead of the 
                 android:focusableInTouchMode="true"
                 android:saveEnabled="true" >
 
-                <org.crossconnect.bible.actions.PersonalNotesEditText
+                <org.crossconnect.bible.views.PersonalNotesEditText
                     android:id="@+id/notes_edit_text"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"

@@ -342,7 +342,7 @@ public class BookmanagerCommentaryFragment extends ListFragment implements Loade
 	private void doDownload(Book document) {
 
     	try {
-    		Log.e("DoDownload", "Starting Download");
+    		Log.e("BookmanagerCommentaryFragment", "Starting Download");
     		// the download happens in another thread
     		SwordDocumentFacade.getInstance().downloadDocument(document);
 	    	

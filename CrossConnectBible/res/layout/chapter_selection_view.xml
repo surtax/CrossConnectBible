@@ -20,7 +20,7 @@
 		android:background="@color/dg_gray_dark"
 		android:layout_height="wrap_content">
     	<ImageView android:id="@+id/floating_down" android:background="@android:drawable/arrow_down_float" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-    	<org.crossconnect.bible.actions.BookTopicScrollView android:id="@+id/book_type_scrollview" android:layout_width="fill_parent"
+    	<org.crossconnect.bible.views.BookTopicScrollView android:id="@+id/book_type_scrollview" android:layout_width="fill_parent"
 		android:layout_height="80dp" android:background="@color/dg_gray_dark"/>	
         <View android:layout_width="fill_parent" android:layout_height="4sp" android:background="@color/dg_red"/>
 	    <ImageView android:id="@+id/floating_down" android:background="@android:drawable/arrow_down_float" android:layout_width="wrap_content" android:layout_height="wrap_content"/>

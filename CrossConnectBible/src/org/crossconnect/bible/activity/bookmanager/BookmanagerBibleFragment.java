@@ -288,7 +288,7 @@ public class BookmanagerBibleFragment extends ListFragment implements LoaderMana
     @Override public void onListItemClick(ListView l, View v, int position, long id) {
 		Log.d("Installer", "Installing " + mAdapter.getItem(position).getInitials());
     	try {
-    		Log.e("DoDownload", "Starting Download");
+    		Log.e("BookmanagerBibleFragment", "Starting Download");
     		// the download happens in another thread
     		SwordDocumentFacade.getInstance().downloadDocument(mAdapter.getItem(position));
         	startActivityForResult(new Intent(getActivity(), DownloadStatus.class), RequestResultCodes.DOWNLOAD_REQUEST);

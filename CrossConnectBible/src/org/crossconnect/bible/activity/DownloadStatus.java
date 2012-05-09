@@ -59,7 +59,7 @@ public class DownloadStatus extends ProgressActivityBase {
 					msg = "Doh! Something's gone wrong, sorry about this :(";
 				}
 				
-				Log.e("Install Reporter", msg);
+				Log.e("DownloadStatus", msg);
 
 			}
         });
