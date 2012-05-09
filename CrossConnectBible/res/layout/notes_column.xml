@@ -29,7 +29,7 @@ Column which contains the notes editor
                 android:focusableInTouchMode="true"
                 android:saveEnabled="true" >
 
-                <com.crossconnect.actions.NotesEditText
+                <org.crossconnect.bible.actions.NotesEditText
                     android:id="@+id/notes_edit_text"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"

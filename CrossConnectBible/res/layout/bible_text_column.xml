@@ -6,7 +6,7 @@
     android:layout_height="fill_parent"
     >
     <!-- <BibleTextView/> -->
-	<com.crossconnect.actions.BibleTextScrollView android:id="@+id/bibleScrollView"
+	<org.crossconnect.bible.actions.BibleTextScrollView android:id="@+id/bibleScrollView"
 	android:fadingEdge="none"
 		android:layout_width="fill_parent"
 		android:layout_height="fill_parent"
@@ -17,7 +17,7 @@
             <View android:layout_width="fill_parent" android:layout_height="1sp" android:background="@color/dg_border_gray"/>
             <Button android:id="@+id/prev_chapter_button" android:text="Previous Chapter" android:layout_height="30sp" android:layout_width="fill_parent" android:background="@drawable/next_prev_chapter_selector" android:textColor="@color/dg_red"/>			
             <View android:layout_width="fill_parent" android:layout_height="1sp" android:background="@color/dg_border_gray"/>
-			<com.crossconnect.actions.BibleTextView style="?android:attr/textViewStyle"
+			<org.crossconnect.bible.actions.BibleTextView style="?android:attr/textViewStyle"
 			    android:textColor="@color/google_text_black"
 				android:editable="false"
 				android:id="@+id/bible_text" android:paddingTop="4dip"
@@ -31,5 +31,5 @@
 			<Button android:id="@+id/next_chapter_button" android:text="Next Chapter" android:layout_below="@+id/bible_text" android:layout_height="30sp" android:layout_width="fill_parent" android:background="@drawable/next_prev_chapter_selector" android:textColor="@color/dg_red"/>
             <View android:layout_width="fill_parent" android:layout_height="1sp" android:background="@color/dg_border_gray"/>
 		</LinearLayout>
-	</com.crossconnect.actions.BibleTextScrollView>
+	</org.crossconnect.bible.actions.BibleTextScrollView>
 </LinearLayout>

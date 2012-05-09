@@ -3,6 +3,7 @@ package net.sword.engine.sword;
 import java.io.File;
 import java.util.List;
 
+import org.crossconnect.bible.service.DownloadManager;
 import org.crosswire.common.util.CWProject;
 import org.crosswire.common.util.WebResource;
 import org.crosswire.jsword.book.Book;
@@ -19,7 +20,6 @@ import org.crosswire.jsword.index.IndexStatus;
 
 import android.util.Log;
 
-import com.crossconnect.service.DownloadManager;
 
 /** JSword facade
  * 

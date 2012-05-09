@@ -9,7 +9,7 @@
 
 package net.londatiga.qahorizontal;
 
-import com.crossconnect.actions.R;
+import org.crossconnect.bible.actions.R;
 
 import android.content.Context;
 
