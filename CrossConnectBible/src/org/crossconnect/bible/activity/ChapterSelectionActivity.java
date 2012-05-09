@@ -370,10 +370,6 @@ public class ChapterSelectionActivity extends Activity {
 	    	Log.i("chapterselectionactivity", "book received: " + book);
 	    	Log.i("chapterselectionactivity", "chapter received: " + chapter);
 
-	    	//TODO:handle translations
-	    	String translation = getIntent().getExtras().getString("Translation");
-	    	
-	
 	    	if(book != null && bibleBooks.contains(book)){
 				topicScrollView.post(new Runnable(){
 
@@ -417,8 +413,8 @@ public class ChapterSelectionActivity extends Activity {
     
 
 
-	private void addHashItems(List strings) {
-        Iterator it = strings.iterator();
+	private void addHashItems(List<String> strings) {
+        Iterator<String> it = strings.iterator();
         while (it.hasNext()) {
             HashMap<String, String> item = new HashMap<String, String>();
             item.put("line1", (String) it.next());

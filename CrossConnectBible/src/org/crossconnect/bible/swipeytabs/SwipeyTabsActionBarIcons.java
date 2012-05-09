@@ -19,21 +19,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.crossconnect.bible.R;
-
 import android.content.Context;
-import android.content.res.TypedArray;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Paint;
-import android.support.v4.view.ViewPager.OnPageChangeListener;
-import android.text.TextUtils.TruncateAt;
 import android.util.AttributeSet;
-import android.view.Gravity;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 public class SwipeyTabsActionBarIcons extends SwipeyTabs {
 

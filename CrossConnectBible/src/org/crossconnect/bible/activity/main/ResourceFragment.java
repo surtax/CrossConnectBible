@@ -20,6 +20,11 @@ package org.crossconnect.bible.activity.main;
 import java.io.File;
 import java.util.List;
 
+import net.londatiga.android.QuickActionVertical;
+import net.londatiga.qahorizontal.ActionItem;
+import net.londatiga.qahorizontal.QuickActionHorizontal;
+
+import org.crossconnect.bible.R;
 import org.crossconnect.bible.activity.ArticleActivity;
 import org.crossconnect.bible.activity.MainActivity;
 import org.crossconnect.bible.adapter.ResourceListAdapter;
@@ -31,9 +36,6 @@ import org.crossconnect.bible.service.ResourceService;
 import org.crossconnect.bible.util.FileUtil;
 import org.crossconnect.bible.utility.Utils;
 
-import net.londatiga.android.QuickActionVertical;
-import net.londatiga.qahorizontal.ActionItem;
-import net.londatiga.qahorizontal.QuickActionHorizontal;
 import android.app.DownloadManager;
 import android.app.DownloadManager.Request;
 import android.content.Context;
@@ -50,17 +52,12 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.PopupWindow.OnDismissListener;
 import android.widget.ProgressBar;
-import android.widget.TextView;
 import android.widget.Toast;
-
-import org.crossconnect.bible.R;
 
 public class ResourceFragment extends ListFragment implements LoaderManager.LoaderCallbacks<List<OnlineAudioResource>> {
 	

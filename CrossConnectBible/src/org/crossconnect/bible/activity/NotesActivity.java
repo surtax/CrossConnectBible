@@ -3,6 +3,7 @@ package org.crossconnect.bible.activity;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.crossconnect.bible.R;
 import org.crossconnect.bible.activity.notemanager.NoteManagerBibleNotesFragment;
 import org.crossconnect.bible.activity.notemanager.NoteManagerPersonalNotesFragment;
 import org.crossconnect.bible.activity.notemanager.PersonalNotesActivity;
@@ -19,14 +20,10 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.TabHost;
 import android.widget.TextView;
-
-import org.crossconnect.bible.R;
 
 public class NotesActivity extends FragmentActivity {
 

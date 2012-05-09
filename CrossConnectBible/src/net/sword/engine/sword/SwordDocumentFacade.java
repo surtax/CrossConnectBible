@@ -89,7 +89,7 @@ public class SwordDocumentFacade {
 			
 //				log.debug(("Sword paths:"+getPaths()));
 		} catch (Exception e) {
-			Log.e("SwordDocumentFacade", "Initialisation failed", e);
+			Log.e(TAG, "Initialisation failed", e);
 		}
 	}
 
@@ -300,9 +300,9 @@ public class SwordDocumentFacade {
 			try {
 				downloadManager.installBook(repo, document);
 			} catch (BookException e) {
-				Log.e("SwordDocumentFacade", "downloadDOcumentException", e);
+				Log.e(TAG, "downloadDOcumentException", e);
 			} catch (InstallException e) {
-				Log.e("SwordDocumentFacade", "downloadDOcumentException", e);
+				Log.e(TAG, "downloadDOcumentException", e);
 			}
 		}
 

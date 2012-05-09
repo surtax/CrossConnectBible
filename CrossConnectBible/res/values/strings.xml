@@ -19,6 +19,6 @@
         <a href="http://www.esv.org">www.esv.org</a>
         and restart the widget.
     </string>
-    
+    <string name="books_title">Books</string>
         
 </resources>

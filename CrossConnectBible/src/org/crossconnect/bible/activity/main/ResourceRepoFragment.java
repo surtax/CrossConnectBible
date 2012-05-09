@@ -64,9 +64,7 @@ public class ResourceRepoFragment extends ListFragment implements
 		readAction.setTitle("Read");
 		readAction.setIcon(getResources().getDrawable(R.drawable.kontak));
 
-		final QuickActionHorizontal mQuickAction = new QuickActionHorizontal(v);
-
-		final String text = "blah";
+//		final QuickActionHorizontal mQuickAction = new QuickActionHorizontal(v);
 
 //		// Check the links are actually there
 //		if (resource.getAudioURL() != null) {

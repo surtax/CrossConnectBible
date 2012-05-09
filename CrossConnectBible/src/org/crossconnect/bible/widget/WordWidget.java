@@ -103,7 +103,7 @@ public class WordWidget extends AppWidgetProvider {
 				views.setTextViewText(R.id.word_title, "Oops sorry");
 				views.setTextViewText(R.id.definition, context.getString(R.string.widget_error));
 
-				String definePage = "";//String.format("%s://%s/%s", ESVApiHelper.ESV_AUTHORITY, ESVApiHelper.WIKI_LOOKUP_HOST, pageName);
+//				String definePage = "";//String.format("%s://%s/%s", ESVApiHelper.ESV_AUTHORITY, ESVApiHelper.WIKI_LOOKUP_HOST, pageName);
 				Intent defineIntent = new Intent(this, MainActivity.class);
 
 				PendingIntent pendingIntent = PendingIntent.getActivity(context, 0 /* no requestCode */, defineIntent, 0 /* no flags */);

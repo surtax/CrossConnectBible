@@ -130,8 +130,6 @@ public class BookTopicScrollView extends HorizontalScrollView {
     }
 
     public int getBookPosition() {
-        int bookPosition = 0;
-        
         double section = (double) this.getScrollX()/ (double) getColumnWidth();
         return BibleDataHelper.getBookPosition(section);
     }

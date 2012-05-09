@@ -183,7 +183,7 @@ public class BibleTextView extends TextView{
      */
     public void selectVerse(int characterNumber, int currentStart, int currentEnd) {
         
-    	Log.e("SelectVerse", "From charpos to verse org.crossconnect.bible.utility" + bibleText.getVerseFromCharPos(this.getSelectionStart()));
+    	Log.e(TAG, "SelectVerse: From charpos to verse org.crossconnect.bible.utility" + bibleText.getVerseFromCharPos(this.getSelectionStart()));
 
         
     	int newSelection = bibleText.getVerseFromCharPos(this.getSelectionStart());
@@ -352,20 +352,6 @@ public class BibleTextView extends TextView{
     	}
     }
     
-    /**
-     * Set the currently selected start and end to the given character position
-     * 
-     * Used to be used to request focus to prevent edittet from being stupid but now it is textview so no longer
-     * has that problem
-     * 
-     * @param pos the character position to select
-     */
-    @Deprecated
-    private void setSelection(int pos) {
-		selectionStart = pos;
-		selectionEnd = pos;
-	}
-
 	/**
      * Finds the verse given a certain y co-ordinate
      * @param current y co-ordinate

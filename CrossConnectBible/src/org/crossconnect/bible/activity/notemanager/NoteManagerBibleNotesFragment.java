@@ -275,9 +275,6 @@ public class NoteManagerBibleNotesFragment extends ListFragment implements Loade
     	
         final QuickActionHorizontal mQuickAction  = new QuickActionHorizontal(v);
         
-        final String text               = "blah";
-        
-        
         openAction.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {

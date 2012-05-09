@@ -57,7 +57,8 @@ public class XMLHandler extends DefaultHandler {
 	 */
 	@Override
 	public void characters(char ch[], int start, int length) {
-		 String debug = new String(ch, start, length);
+		//Uncomment to determine each word
+		//String debug = new String(ch, start, length);
 
 		if (in_heading == true) {
 			if (include_headings) {

@@ -61,8 +61,6 @@ public class TabsActivity extends Activity implements TabContentFactory {
     
     private static final int CHAPTER_SELECT_CODE = 0;
     
-    private static final int GALLERY_COLOR = Color.parseColor("#B68543");
-    
     private WindowsService windowsService;
     
     BibleText bibleTextReceived;

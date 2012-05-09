@@ -53,8 +53,6 @@ public class AudioBibleFragment extends ListFragment {
 	
 	private static final String TAG = "AudioBibleFragment";
 	
-    private ImageButton notesLock;
-    
     BibleTextView bibleTextView;
 
 //    @Override
@@ -74,12 +72,6 @@ public class AudioBibleFragment extends ListFragment {
         	mAdapter.setData(book, numVerses);
     }
 
-    
-    
-    private void loadNotes() {
-        //Re-initialise list to number of chapters of the given audio
-    }
-    
     
     public static class AudioBibleAdapter extends ArrayAdapter<String> {
         private final LayoutInflater mInflater;

@@ -1,28 +1,23 @@
 package org.crossconnect.bible.activity;
 
+import org.crossconnect.bible.R;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
 import android.webkit.WebChromeClient;
-import android.webkit.WebSettings.LayoutAlgorithm;
 import android.webkit.WebSettings.PluginState;
-import android.webkit.WebSettings.ZoomDensity;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
-
-import org.crossconnect.bible.R;
 
 
 public class ArticleActivity extends Activity {
@@ -124,43 +119,4 @@ public class ArticleActivity extends Activity {
 
 		webView.loadUrl(getIntent().getExtras().getString("url"));
 	}
-	
-    /**
-     * Inflate options menu from resource
-     */
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-//        inflater.inflate(R.menu.webview, menu);
-        return true;
-    }
-
-    /**
-     * When a menu item is selected determines what to do with it
-     */
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-//        switch (item.getItemId()) {
-//        case R.id.lookup_share: {
-//            share();
-//            return true;
-//        }}
-        return false;
-    }    
-    
-    
-    
-	
-    /**
-     * Share the selected verse by intent
-     */
-    private void share() {
-        Intent sendMailIntent = new Intent(Intent.ACTION_SEND);
-        sendMailIntent.putExtra(Intent.EXTRA_SUBJECT, "CrossConnect Bible - Article");
-        sendMailIntent.putExtra(Intent.EXTRA_TEXT, url);
-        sendMailIntent.setType("text/plain");
-        startActivity(Intent.createChooser(sendMailIntent, "Share using..."));
-    }
-
-
 }
