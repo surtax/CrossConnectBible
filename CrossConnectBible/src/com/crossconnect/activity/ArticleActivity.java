@@ -75,6 +75,8 @@ public class ArticleActivity extends Activity {
 		//Set title
 		((TextView) findViewById(R.id.header_title)).setText(verse) ;
 
+		webView.getSettings().setAppCacheEnabled(true);
+		webView.getSettings().setAppCacheMaxSize(1024*1024*8);
 		webView.getSettings().setJavaScriptEnabled(true);
 		webView.getSettings().setLoadWithOverviewMode(true);
 		webView.getSettings().setUseWideViewPort(true);
