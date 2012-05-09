@@ -21,7 +21,6 @@ import java.util.List;
 import org.crossconnect.bible.model.BibleText;
 import org.crossconnect.bible.model.Window;
 import org.crossconnect.bible.service.WindowsService;
-import org.crossconnect.bible.views.ChapterSelectionActivity;
 
 import net.sword.engine.sword.SwordContentFacade;
 import android.app.Activity;

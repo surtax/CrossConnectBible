@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.crossconnect.bible.views;
+package org.crossconnect.bible.activity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -23,10 +23,10 @@ import java.util.List;
 
 import net.sword.engine.sword.SwordContentFacade;
 
-import org.crossconnect.bible.activity.BookManagerActivity;
 import org.crossconnect.bible.model.BibleText;
 import org.crossconnect.bible.model.SwordBibleText;
 import org.crossconnect.bible.util.BibleDataHelper;
+import org.crossconnect.bible.views.BookTopicScrollView;
 import org.crosswire.jsword.passage.NoSuchKeyException;
 
 import android.app.Activity;

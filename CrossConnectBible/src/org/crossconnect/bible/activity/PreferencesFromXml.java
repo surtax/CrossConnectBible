@@ -14,8 +14,9 @@
  * limitations under the License.
  */
 
-package org.crossconnect.bible.views;
+package org.crossconnect.bible.activity;
 
+import org.crossconnect.bible.views.ColorPickerDialog;
 import org.crossconnect.bible.views.ColorPickerDialog.OnColorChangedListener;
 
 import org.crossconnect.bible.R;

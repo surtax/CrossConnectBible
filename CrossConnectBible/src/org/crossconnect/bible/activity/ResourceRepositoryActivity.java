@@ -1,4 +1,4 @@
-package org.crossconnect.bible.views;
+package org.crossconnect.bible.activity;
 
 import org.crossconnect.bible.R;
 

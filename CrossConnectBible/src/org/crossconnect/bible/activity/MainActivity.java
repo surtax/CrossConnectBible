@@ -26,9 +26,6 @@ import org.crossconnect.bible.service.NotesService;
 import org.crossconnect.bible.service.ResourceService;
 import org.crossconnect.bible.utility.SharedPreferencesHelper;
 import org.crossconnect.bible.utility.Utils;
-import org.crossconnect.bible.views.ChapterSelectionActivity;
-import org.crossconnect.bible.views.PreferencesFromXml;
-import org.crossconnect.bible.views.ResourceRepositoryActivity;
 
 import net.londatiga.android.QuickActionVertical;
 import net.londatiga.qahorizontal.ActionItem;

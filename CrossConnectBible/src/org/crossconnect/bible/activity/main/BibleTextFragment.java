@@ -17,13 +17,13 @@ import java.util.List;
 
 import org.crossconnect.bible.activity.MainActivity;
 import org.crossconnect.bible.activity.TabsActivity;
+import org.crossconnect.bible.activity.WindowsActivity;
 import org.crossconnect.bible.model.BibleText;
 import org.crossconnect.bible.model.Note;
 import org.crossconnect.bible.model.SwordBibleText;
 import org.crossconnect.bible.utility.SharedPreferencesHelper;
 import org.crossconnect.bible.views.BibleTextScrollView;
 import org.crossconnect.bible.views.BibleTextView;
-import org.crossconnect.bible.views.WindowsActivity;
 
 
 import net.sword.engine.sword.SwordContentFacade;
