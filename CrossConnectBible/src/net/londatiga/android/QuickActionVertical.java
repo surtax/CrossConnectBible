@@ -21,7 +21,7 @@ import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
-import com.crossconnect.actions.R;
+import org.crossconnect.bible.R;
 
 /**
  * Popup window, shows action list as icon and text like the one in Gallery3D app. 

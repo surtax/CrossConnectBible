@@ -34,7 +34,7 @@
     </LinearLayout>
     <View android:layout_width="fill_parent" android:layout_height="2sp" android:background="@color/dg_red"/>
     <LinearLayout android:id="@+id/home_feature_container" android:layout_weight="1" android:layout_height="wrap_content" android:layout_width="fill_parent" android:background="@color/solid_white">
-        <com.crossconnect.actions.HomeFeatureLayout android:id="@+id/home_feature" android:layout_height="fill_parent" android:layout_width="fill_parent" android:fadingEdge="none"/>
+        <org.crossconnect.bible.views.HomeFeatureLayout android:id="@+id/home_feature" android:layout_height="fill_parent" android:layout_width="fill_parent" android:fadingEdge="none"/>
     </LinearLayout>
     <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="25sp" android:gravity="center_horizontal" android:paddingBottom="5sp" android:id="@+id/icon_tray_container" android:background="@color/dg_gray">
         <ImageButton android:background="@drawable/sermon" android:id="@+id/column_icon_sermon" android:focusableInTouchMode="true" android:focusable="true" android:layout_width="20sp" android:layout_height="20sp" android:layout_marginLeft="20sp" android:layout_marginRight="20sp"></ImageButton>

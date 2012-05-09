@@ -29,7 +29,7 @@ import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
-import com.crossconnect.actions.R;
+import org.crossconnect.bible.R;
 
 
 /**

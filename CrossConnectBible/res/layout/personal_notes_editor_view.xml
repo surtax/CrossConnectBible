@@ -16,7 +16,7 @@
 -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:swipeytabs="http://schemas.android.com/apk/res/com.crossconnect.actions"
+    xmlns:swipeytabs="http://schemas.android.com/apk/res/org.crossconnect.bible"
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
@@ -32,5 +32,5 @@
     </LinearLayout>
     <View android:layout_width="fill_parent" android:layout_height="2sp" android:background="@color/dg_red"/>
     
-    <fragment android:name="com.crossconnect.activity.notemanager.PersonalNotesEditorFragment" android:id="@+id/editor" android:layout_weight="1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:tag="notes_editor_fragment"/>     
+    <fragment android:name="org.crossconnect.bible.activity.notemanager.PersonalNotesEditorFragment" android:id="@+id/editor" android:layout_weight="1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:tag="notes_editor_fragment"/>     
 </LinearLayout>

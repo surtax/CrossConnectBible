@@ -5,6 +5,9 @@ import java.util.Iterator;
 import net.sword.engine.OSISHandler.ParsedDataSet;
 import net.sword.engine.OSISHandler.XMLHandler;
 
+import org.crossconnect.bible.model.BibleText;
+import org.crossconnect.bible.model.SwordBibleText;
+import org.crossconnect.bible.utility.Utils;
 import org.crosswire.common.xml.SAXEventProvider;
 import org.crosswire.jsword.book.Book;
 import org.crosswire.jsword.book.BookCategory;
@@ -14,11 +17,8 @@ import org.crosswire.jsword.passage.Key;
 import org.crosswire.jsword.passage.NoSuchKeyException;
 import org.crosswire.jsword.passage.Passage;
 
-import utility.Utils;
 import android.util.Log;
 
-import com.crossconnect.model.BibleText;
-import com.crossconnect.model.SwordBibleText;
 
 /** JSword facade
  * 

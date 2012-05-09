@@ -16,7 +16,7 @@
 -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:swipeytabs="http://schemas.android.com/apk/res/com.crossconnect.actions"
+    xmlns:swipeytabs="http://schemas.android.com/apk/res/org.crossconnect.bible"
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
@@ -37,7 +37,7 @@
     	android:layout_height="0px"
     	android:layout_weight="1" />
     
-    <com.crossconnect.swipeytabs.SwipeyTabsActionBarIcons
+    <org.crossconnect.bible.swipeytabs.SwipeyTabsActionBarIcons
         android:id="@+id/swipeytabs"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"

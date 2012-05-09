@@ -16,7 +16,8 @@
         </LinearLayout>
     </LinearLayout>
     <View android:layout_width="fill_parent" android:layout_height="2sp" android:background="@color/dg_red"/>
-    <LinearLayout android:id="@+id/home_feature_container" android:layout_weight="1" android:layout_height="wrap_content" android:layout_width="fill_parent" android:background="@color/solid_white">
+    <fragment android:name="org.crossconnect.bible.activity.bookmanager.BookmanagerBibleFragment" android:id="@+id/editor" android:layout_weight="1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:tag="notes_editor_fragment"/>
+    <LinearLayout android:id="@+id/home_feature_container" android:layout_weight="1" android:layout_height="wrap_content" android:layout_width="fill_parent" android:background="@color/solid_white" android:visibility="gone">
         <ListView android:layout_height="fill_parent"
             android:layout_width="fill_parent" android:id="@+id/android:list" />
         <!-- Here is the view to show if the list is empty -->
