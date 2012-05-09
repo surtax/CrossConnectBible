@@ -16,7 +16,7 @@
 
 package org.crossconnect.bible.swipeytabs;
 
-import org.crossconnect.bible.actions.R;
+import org.crossconnect.bible.R;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

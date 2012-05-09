@@ -39,7 +39,7 @@ import android.os.PowerManager;
 import android.util.Log;
 import android.widget.Toast;
 
-import org.crossconnect.bible.actions.R;
+import org.crossconnect.bible.R;
 
 /**
  * Service that handles media playback. This is the Service through which we perform all the media

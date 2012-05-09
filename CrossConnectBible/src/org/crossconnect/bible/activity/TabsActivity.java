@@ -18,10 +18,10 @@ package org.crossconnect.bible.activity;
 
 import java.util.List;
 
-import org.crossconnect.bible.actions.ChapterSelectionActivity;
 import org.crossconnect.bible.model.BibleText;
 import org.crossconnect.bible.model.Window;
 import org.crossconnect.bible.service.WindowsService;
+import org.crossconnect.bible.views.ChapterSelectionActivity;
 
 import net.sword.engine.sword.SwordContentFacade;
 import android.app.Activity;
@@ -49,7 +49,7 @@ import android.widget.TabHost.OnTabChangeListener;
 import android.widget.TabHost.TabContentFactory;
 import android.widget.TextView;
 
-import org.crossconnect.bible.actions.R;
+import org.crossconnect.bible.R;
 
 
 public class TabsActivity extends Activity implements TabContentFactory {

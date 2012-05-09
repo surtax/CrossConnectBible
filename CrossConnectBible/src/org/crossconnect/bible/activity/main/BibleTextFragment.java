@@ -15,15 +15,15 @@ package org.crossconnect.bible.activity.main;
 
 import java.util.List;
 
-import org.crossconnect.bible.actions.BibleTextScrollView;
-import org.crossconnect.bible.actions.BibleTextView;
-import org.crossconnect.bible.actions.WindowsActivity;
 import org.crossconnect.bible.activity.MainActivity;
 import org.crossconnect.bible.activity.TabsActivity;
 import org.crossconnect.bible.model.BibleText;
 import org.crossconnect.bible.model.Note;
 import org.crossconnect.bible.model.SwordBibleText;
 import org.crossconnect.bible.utility.SharedPreferencesHelper;
+import org.crossconnect.bible.views.BibleTextScrollView;
+import org.crossconnect.bible.views.BibleTextView;
+import org.crossconnect.bible.views.WindowsActivity;
 
 
 import net.sword.engine.sword.SwordContentFacade;
@@ -48,7 +48,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-import org.crossconnect.bible.actions.R;
+import org.crossconnect.bible.R;
 
 public class BibleTextFragment extends Fragment implements LoaderManager.LoaderCallbacks<List<Note>> {
 

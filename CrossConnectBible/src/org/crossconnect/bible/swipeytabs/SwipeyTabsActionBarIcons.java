@@ -19,7 +19,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.crossconnect.bible.actions.R;
+import org.crossconnect.bible.R;
 
 import android.content.Context;
 import android.content.res.TypedArray;

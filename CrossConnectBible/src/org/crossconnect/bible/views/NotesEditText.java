@@ -1,4 +1,4 @@
-package org.crossconnect.bible.actions;
+package org.crossconnect.bible.views;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,7 +33,7 @@ import android.widget.PopupWindow.OnDismissListener;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.crossconnect.bible.actions.R;
+import org.crossconnect.bible.R;
 
 /**
  * A custom EditText that draws lines between each line of text that is

@@ -1,6 +1,6 @@
-package org.crossconnect.bible.actions;
+package org.crossconnect.bible.views;
 
-import org.crossconnect.bible.actions.R;
+import org.crossconnect.bible.R;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;

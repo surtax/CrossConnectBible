@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.crossconnect.bible.actions;
+package org.crossconnect.bible.views;
 
 import java.util.List;
 
@@ -48,7 +48,7 @@ import android.widget.SpinnerAdapter;
 import android.widget.TabHost.TabContentFactory;
 import android.widget.TextView;
 
-import org.crossconnect.bible.actions.R;
+import org.crossconnect.bible.R;
 
 
 public class WindowsActivity extends Activity implements TabContentFactory {

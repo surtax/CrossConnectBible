@@ -25,7 +25,7 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import org.crossconnect.bible.actions.R;
+import org.crossconnect.bible.R;
 
 public class WelcomeActivity extends ListActivity{
 

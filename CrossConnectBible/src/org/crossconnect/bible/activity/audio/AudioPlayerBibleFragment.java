@@ -45,7 +45,7 @@ import android.widget.PopupWindow.OnDismissListener;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.crossconnect.bible.actions.R;
+import org.crossconnect.bible.R;
 
 public class AudioPlayerBibleFragment extends ListFragment {
 	

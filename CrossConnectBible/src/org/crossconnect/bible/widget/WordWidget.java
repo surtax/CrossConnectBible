@@ -36,7 +36,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.RemoteViews;
 
-import org.crossconnect.bible.actions.R;
+import org.crossconnect.bible.R;
 
 /**
  * Define a simple widget that shows the Wiktionary "Word of the day." To build

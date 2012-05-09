@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
 
-import org.crossconnect.bible.actions.R;
+import org.crossconnect.bible.R;
 
 public class PersonalNotesActivity extends FragmentActivity{
 

@@ -32,7 +32,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ListView;
 
-import org.crossconnect.bible.actions.R;
+import org.crossconnect.bible.R;
 
 public class ResourceRepoFragment extends ListFragment implements
 		LoaderManager.LoaderCallbacks<List<ResourceRepository>> {

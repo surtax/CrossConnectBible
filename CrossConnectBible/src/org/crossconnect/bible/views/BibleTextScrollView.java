@@ -1,6 +1,6 @@
-package org.crossconnect.bible.actions;
+package org.crossconnect.bible.views;
 
-import org.crossconnect.bible.actions.R;
+import org.crossconnect.bible.R;
 
 import android.content.Context;
 import android.os.Bundle;

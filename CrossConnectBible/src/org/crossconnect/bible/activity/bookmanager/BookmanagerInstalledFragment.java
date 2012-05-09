@@ -44,7 +44,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import org.crossconnect.bible.actions.R;
+import org.crossconnect.bible.R;
 
 public class BookmanagerInstalledFragment extends ListFragment implements LoaderManager.LoaderCallbacks<List<Book>> {
 	

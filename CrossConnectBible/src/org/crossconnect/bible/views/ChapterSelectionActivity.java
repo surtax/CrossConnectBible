@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.crossconnect.bible.actions;
+package org.crossconnect.bible.views;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -56,7 +56,7 @@ import android.widget.SimpleAdapter;
 import android.widget.SpinnerAdapter;
 import android.widget.TextView;
 
-import org.crossconnect.bible.actions.R;
+import org.crossconnect.bible.R;
 
 public class ChapterSelectionActivity extends Activity {
     

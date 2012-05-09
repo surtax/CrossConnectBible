@@ -17,10 +17,10 @@ package org.crossconnect.bible.activity.main;
  */
 
 
-import org.crossconnect.bible.actions.BibleTextView;
-import org.crossconnect.bible.actions.NotesEditText;
 import org.crossconnect.bible.model.BibleText;
 import org.crossconnect.bible.service.NotesService;
+import org.crossconnect.bible.views.BibleTextView;
+import org.crossconnect.bible.views.NotesEditText;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -34,7 +34,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 
-import org.crossconnect.bible.actions.R;
+import org.crossconnect.bible.R;
 
 public class SimpleLoaderTemplate extends Fragment implements LoaderManager.LoaderCallbacks<String> {
 	

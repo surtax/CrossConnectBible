@@ -17,10 +17,10 @@ package org.crossconnect.bible.activity.main;
  */
 
 
-import org.crossconnect.bible.actions.BibleTextView;
 import org.crossconnect.bible.model.BibleText;
 import org.crossconnect.bible.musicplayer.MusicService;
 import org.crossconnect.bible.utility.Utils;
+import org.crossconnect.bible.views.BibleTextView;
 
 import net.londatiga.android.QuickActionVertical;
 import net.londatiga.qahorizontal.ActionItem;
@@ -47,8 +47,8 @@ import android.widget.PopupWindow.OnDismissListener;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.crossconnect.bible.actions.R;
-
+import org.crossconnect.bible.R;
+;
 public class AudioBibleFragment extends ListFragment {
 	
 	private static final String TAG = "AudioBibleFragment";

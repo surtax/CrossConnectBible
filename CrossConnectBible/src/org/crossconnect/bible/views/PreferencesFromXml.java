@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.crossconnect.bible.actions;
+package org.crossconnect.bible.views;
 
-import org.crossconnect.bible.actions.ColorPickerDialog.OnColorChangedListener;
+import org.crossconnect.bible.views.ColorPickerDialog.OnColorChangedListener;
 
-import org.crossconnect.bible.actions.R;
+import org.crossconnect.bible.R;
 
 import android.content.Context;
 import android.content.SharedPreferences;

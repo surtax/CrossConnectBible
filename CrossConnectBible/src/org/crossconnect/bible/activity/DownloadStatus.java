@@ -20,7 +20,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import org.crossconnect.bible.actions.R;
+import org.crossconnect.bible.R;
 
 public class DownloadStatus extends ProgressActivityBase {
 	private static final String TAG = "DownloadStatus";

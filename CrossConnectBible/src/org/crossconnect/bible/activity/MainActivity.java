@@ -16,9 +16,6 @@ package org.crossconnect.bible.activity;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.crossconnect.bible.actions.ChapterSelectionActivity;
-import org.crossconnect.bible.actions.PreferencesFromXml;
-import org.crossconnect.bible.actions.ResourceRepositoryActivity;
 import org.crossconnect.bible.activity.main.AudioBibleFragment;
 import org.crossconnect.bible.activity.main.BibleTextFragment;
 import org.crossconnect.bible.activity.main.NotesEditorFragment;
@@ -29,6 +26,9 @@ import org.crossconnect.bible.service.NotesService;
 import org.crossconnect.bible.service.ResourceService;
 import org.crossconnect.bible.utility.SharedPreferencesHelper;
 import org.crossconnect.bible.utility.Utils;
+import org.crossconnect.bible.views.ChapterSelectionActivity;
+import org.crossconnect.bible.views.PreferencesFromXml;
+import org.crossconnect.bible.views.ResourceRepositoryActivity;
 
 import net.londatiga.android.QuickActionVertical;
 import net.londatiga.qahorizontal.ActionItem;
@@ -56,7 +56,7 @@ import android.widget.TabHost;
 import android.widget.TabWidget;
 import android.widget.TextView;
 
-import org.crossconnect.bible.actions.R;
+import org.crossconnect.bible.R;
 
 /**
  * Demonstrates combining a TabHost with a ViewPager to implement a tab UI that switches between tabs and also allows

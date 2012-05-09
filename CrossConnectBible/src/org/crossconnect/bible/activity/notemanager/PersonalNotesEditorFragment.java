@@ -17,8 +17,8 @@ package org.crossconnect.bible.activity.notemanager;
  */
 
 
-import org.crossconnect.bible.actions.PersonalNotesEditText;
 import org.crossconnect.bible.service.NotesService;
+import org.crossconnect.bible.views.PersonalNotesEditText;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -34,7 +34,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 
-import org.crossconnect.bible.actions.R;
+import org.crossconnect.bible.R;
 
 public class PersonalNotesEditorFragment extends Fragment implements LoaderManager.LoaderCallbacks<String> {
 	

@@ -1,4 +1,4 @@
-package org.crossconnect.bible.actions;
+package org.crossconnect.bible.views;
 
 /*
  * Copyright (C) 2006 The Android Open Source Project
@@ -41,7 +41,7 @@ import android.widget.TextView;
 import java.util.Formatter;
 import java.util.Locale;
 
-import org.crossconnect.bible.actions.R;
+import org.crossconnect.bible.R;
 
 /**
  * A view containing controls for a MediaPlayer. Typically contains the

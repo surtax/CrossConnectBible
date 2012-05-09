@@ -60,7 +60,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.crossconnect.bible.actions.R;
+import org.crossconnect.bible.R;
 
 public class ResourceFragment extends ListFragment implements LoaderManager.LoaderCallbacks<List<OnlineAudioResource>> {
 	

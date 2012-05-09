@@ -1,4 +1,4 @@
-package org.crossconnect.bible.actions;
+package org.crossconnect.bible.views;
 
 import java.util.List;
 

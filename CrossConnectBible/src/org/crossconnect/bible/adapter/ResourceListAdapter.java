@@ -12,7 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import org.crossconnect.bible.actions.R;
+import org.crossconnect.bible.R;
 
     public class ResourceListAdapter extends ArrayAdapter<OnlineAudioResource> {
         private final LayoutInflater mInflater;

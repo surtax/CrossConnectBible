@@ -1,4 +1,4 @@
-package org.crossconnect.bible.actions;
+package org.crossconnect.bible.views;
 
 import org.crossconnect.bible.model.BibleText;
 
@@ -23,7 +23,7 @@ import android.widget.PopupWindow.OnDismissListener;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.crossconnect.bible.actions.R;
+import org.crossconnect.bible.R;
 
 /**
  * THis class should always have a scrollview wrapping around it

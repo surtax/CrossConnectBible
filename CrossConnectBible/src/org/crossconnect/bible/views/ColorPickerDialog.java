@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.crossconnect.bible.actions;
+package org.crossconnect.bible.views;
 
 import android.app.Dialog;
 import android.content.Context;

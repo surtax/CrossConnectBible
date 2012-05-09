@@ -1,6 +1,6 @@
 package net.londatiga.qahorizontal;
 
-import org.crossconnect.bible.actions.R;
+import org.crossconnect.bible.R;
 
 import android.view.View;
 import android.view.ViewGroup;

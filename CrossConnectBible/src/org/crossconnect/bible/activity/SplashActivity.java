@@ -18,7 +18,7 @@ import android.nfc.tech.NdefFormatable;
 import android.os.AsyncTask;
 import android.os.Bundle;
 
-import org.crossconnect.bible.actions.R;
+import org.crossconnect.bible.R;
 
 
 public class SplashActivity extends Activity{
