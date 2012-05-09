@@ -17,14 +17,16 @@ package org.crossconnect.bible.activity.main;
  */
 
 
+import net.londatiga.android.QuickActionVertical;
+import net.londatiga.qahorizontal.ActionItem;
+import net.londatiga.qahorizontal.QuickActionHorizontal;
+
+import org.crossconnect.bible.R;
 import org.crossconnect.bible.model.BibleText;
 import org.crossconnect.bible.musicplayer.MusicService;
 import org.crossconnect.bible.utility.Utils;
 import org.crossconnect.bible.views.BibleTextView;
 
-import net.londatiga.android.QuickActionVertical;
-import net.londatiga.qahorizontal.ActionItem;
-import net.londatiga.qahorizontal.QuickActionHorizontal;
 import android.app.DownloadManager;
 import android.app.DownloadManager.Request;
 import android.content.Context;
@@ -40,14 +42,11 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.PopupWindow.OnDismissListener;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import org.crossconnect.bible.R;
 ;
 public class AudioBibleFragment extends ListFragment {
 	
