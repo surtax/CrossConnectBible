@@ -174,7 +174,7 @@ public class NoteManagerPersonalNotesFragment extends ListFragment implements Lo
         View addRow;
 
         public NoteListAdapter(Context context) {
-            super(context, R.layout.list_item_icon_text_two_line);
+            super(context, R.layout.list_item_icon_text_max_3);
             mInflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         }
 
@@ -197,7 +197,7 @@ public class NoteManagerPersonalNotesFragment extends ListFragment implements Lo
             View view;
 
             if (convertView == null) {
-                view = mInflater.inflate(R.layout.list_item_icon_text, parent, false);
+                view = mInflater.inflate(R.layout.list_item_icon_text_max_3, parent, false);
             } else {
                 view = convertView;
             }

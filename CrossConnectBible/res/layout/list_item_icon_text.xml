@@ -21,6 +21,7 @@
 
     <ImageView android:id="@+id/icon"
         android:src="@drawable/icon_bible"
+        android:padding="3dp"
         android:layout_width="48dip"
         android:layout_height="48dip" />
 

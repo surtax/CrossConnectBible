@@ -13,38 +13,24 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:gravity="center_vertical"
     android:layout_height="75dp">
 
     <ImageView android:id="@+id/icon"
-        android:layout_width="48dip"
+        android:src="@drawable/icon_bible"
         android:padding="3dp"
+        android:layout_width="48dip"
         android:layout_height="48dip" />
 
-	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	    android:orientation="vertical"
-	    android:gravity="center_vertical"
-	    android:layout_width="match_parent"
-	    android:layout_height="match_parent">
-	
-	    <TextView android:id="@+id/text_line_1"
-	        android:layout_gravity="center_vertical"
-	        android:layout_width="fill_parent"
-	        android:textSize="18sp"
-	        android:maxLines="2"
-	        android:layout_height="wrap_content" />
-	
-	    <TextView android:id="@+id/text_line_2"
-	        android:layout_gravity="center_vertical"
-	        android:layout_width="fill_parent"
-	        android:textSize="16sp"
-	        android:textColor="@color/dg_red"
-	        android:layout_height="wrap_content" />
-	    
-	</LinearLayout>
+    <TextView android:id="@+id/text"
+        android:layout_gravity="top"
+        android:layout_width="0dip"
+        android:layout_weight="1.0"
+        android:maxLines="3"
+        android:textSize="18sp"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>
-

@@ -206,8 +206,8 @@ public class NoteManagerBibleNotesFragment extends ListFragment implements Loade
 
             Note item = getItem(position);
         	((ImageView)view.findViewById(R.id.icon)).setImageResource(R.drawable.icon_notes);
-            ((TextView)view.findViewById(R.id.text_line_1)).setText(item.getBook() + item.getChapter());
-            ((TextView)view.findViewById(R.id.text_line_2)).setText(item.getText());
+            ((TextView)view.findViewById(R.id.text_line_1)).setText(item.getText());
+        	((TextView)view.findViewById(R.id.text_line_2)).setText(item.getBook() + item.getChapter());
             
             return view;
         }
