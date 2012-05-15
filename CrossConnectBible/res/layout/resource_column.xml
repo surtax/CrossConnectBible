@@ -46,6 +46,7 @@ Column which contains the notes editor
             android:layout_height="fill_parent"
             android:gravity="center"
             android:id="@+id/no_internet_msg_layout"
+            android:visibility="gone"
             android:orientation="vertical" >
             <TextView android:text="Sorry could we check the internet and try again?"
                 android:textSize="18sp"
