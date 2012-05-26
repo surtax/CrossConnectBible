@@ -30,6 +30,7 @@ import org.crosswire.jsword.book.Book;
 import org.crosswire.jsword.book.BookCategory;
 import org.crosswire.jsword.book.BookFilter;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -324,30 +325,4 @@ public class BookmanagerBibleFragment extends ListFragment implements LoaderMana
         // Clear the data in the adapter.
         mAdapter.setData(null);
     }
-    
-    @Override
-	public void onActivityResult(int requestCode, int resultCode, Intent data) {
-    	Log.i("BookManagerActivity", "RequestCode:" + requestCode + " ResultCode:" + resultCode);
-    	if (requestCode == RequestResultCodes.DOWNLOAD_REQUEST) {
-    		if (resultCode == RequestResultCodes.SUCCESSFUL_DOWNLOAD) {
-    			//SUCCESSFUL DOWNLOAD
-    	    	Log.i("BookManagerActivity", "Sucessful Download");
-    	    	if (mAdapter != null && bookListLoader != null) {
-                    getLoaderManager().restartLoader(0, null, this);
-    	    	}
-    	    	//TODO: Should make it go to the installed column and highlight
-    	    	
-    	    	BookmanagerInstalledFragment fragment = (BookmanagerInstalledFragment) getFragmentManager().findFragmentByTag("android:switcher:"+R.id.viewpager+":0");
-    	    	if (fragment != null && fragment.getView() != null) {
-    	    		fragment.mAdapter.notifyDataSetChanged();
-    	    	}
-    	    	
-    		} else {
-    	    	Log.e("BookManagerActivity", "Unssucessful Download");
-    		}
-    	}
-        
-    }
-
-   
 }

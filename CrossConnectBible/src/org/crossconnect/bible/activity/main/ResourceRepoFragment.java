@@ -52,17 +52,17 @@ public class ResourceRepoFragment extends ListFragment implements
 		final ActionItem playAction = new ActionItem();
 
 		playAction.setTitle("Play");
-		playAction.setIcon(getResources().getDrawable(R.drawable.kontak));
+		playAction.setIcon(getResources().getDrawable(R.drawable.icon_play));
 
 		final ActionItem downloadAction = new ActionItem();
 
 		downloadAction.setTitle("Download");
-		downloadAction.setIcon(getResources().getDrawable(R.drawable.kontak));
+		downloadAction.setIcon(getResources().getDrawable(R.drawable.icon_download));
 
 		final ActionItem readAction = new ActionItem();
 
 		readAction.setTitle("Read");
-		readAction.setIcon(getResources().getDrawable(R.drawable.kontak));
+		readAction.setIcon(getResources().getDrawable(R.drawable.icon_read));
 
 //		final QuickActionHorizontal mQuickAction = new QuickActionHorizontal(v);
 

@@ -16,6 +16,7 @@
 
 package org.crossconnect.bible.musicplayer;
 
+import java.math.BigInteger;
 import java.util.TimerTask;
 
 import org.crossconnect.bible.activity.MainActivity;
@@ -359,7 +360,7 @@ public class MusicActivity extends FragmentActivity implements OnClickListener {
 		public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
 			if (fromUser == true) {
 				Log.e("MainActivity", "Progress:" + progress);
-				mService.seekTo(mService.getDuration() * progress / seekBar.getMax());
+				mService.seekTo(BigInteger.valueOf(mService.getDuration()).multiply(BigInteger.valueOf(progress)).divide(BigInteger.valueOf(seekBar.getMax())).intValue());
 			}
 		}
 

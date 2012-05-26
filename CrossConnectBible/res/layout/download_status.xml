@@ -11,7 +11,7 @@
     android:layout_height="fill_parent"
     >
    	<TextView android:id="@+id/progressStatusMessage"
-		android:text="Kill Warning"
+		android:text="Installer"
 		android:textAppearance="?android:attr/textAppearanceMedium"
 		android:layout_height="wrap_content" 
 		android:layout_width="wrap_content"

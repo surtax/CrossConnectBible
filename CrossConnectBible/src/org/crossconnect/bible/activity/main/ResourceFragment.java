@@ -31,15 +31,23 @@ import org.crossconnect.bible.adapter.ResourceListAdapter;
 import org.crossconnect.bible.loaders.ResourceLoader;
 import org.crossconnect.bible.model.BibleText;
 import org.crossconnect.bible.model.OnlineAudioResource;
+import org.crossconnect.bible.musicplayer.MusicActivity;
 import org.crossconnect.bible.musicplayer.MusicService;
 import org.crossconnect.bible.service.ResourceService;
 import org.crossconnect.bible.util.FileUtil;
 import org.crossconnect.bible.utility.Utils;
 
 import android.app.DownloadManager;
+import android.app.DownloadManager.Query;
 import android.app.DownloadManager.Request;
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
+import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -67,6 +75,8 @@ public class ResourceFragment extends ListFragment implements LoaderManager.Load
     
     private OnClickListener downloadListener;
     
+    private DownloadManager dm;
+    
     ResourceLoader resourceListLoader;
     
     private BibleText bibleText;
@@ -76,6 +86,8 @@ public class ResourceFragment extends ListFragment implements LoaderManager.Load
     private LinearLayout noInternetLayout;
     
     ProgressBar progress;
+    
+    private long enqueue;
     
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -168,7 +180,7 @@ public class ResourceFragment extends ListFragment implements LoaderManager.Load
                 @Override
                 public void onClick(View v) {
                 	
-                	final String RESOURCE_FOLDER = "/CrossConnectAudio/Resources/";
+                	final String RESOURCE_FOLDER = "/CrossConnectAudio/";
                     Toast.makeText(getActivity(), "Downloading Audio for " + resource.getResourceName(), Toast.LENGTH_SHORT).show();
             		Log.d(TAG, "Downloading Audio " + mAdapter.getItem(position).getResourceName() + "from " + mAdapter.getItem(position).getAudioURL());
 
@@ -182,7 +194,7 @@ public class ResourceFragment extends ListFragment implements LoaderManager.Load
             		
                     request.setDestinationInExternalPublicDir(Environment.DIRECTORY_PODCASTS, RESOURCE_FOLDER + FileUtil.getFileName(mAdapter.getItem(position), bibleText));
 
-            	    ((DownloadManager) getActivity().getSystemService("download")).enqueue(request);
+                    enqueue = dm.enqueue(request);
 
                     mQuickAction.dismiss();
                 }
@@ -242,6 +254,64 @@ public class ResourceFragment extends ListFragment implements LoaderManager.Load
         // Create an empty adapter we will use to display the loaded data.
         mAdapter = new ResourceListAdapter(getActivity());
         setListAdapter(mAdapter);
+        
+        dm = ((DownloadManager) getActivity().getSystemService("download"));
+        
+        BroadcastReceiver receiver = new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context context, Intent intent) {
+                String action = intent.getAction();
+                if (DownloadManager.ACTION_DOWNLOAD_COMPLETE.equals(action)) {
+                    long downloadId = intent.getLongExtra(
+                            DownloadManager.EXTRA_DOWNLOAD_ID, 0);
+                    Query query = new Query();
+                    query.setFilterById(enqueue);
+                    Cursor c = dm.query(query);
+                    if (c.moveToFirst()) {
+                        int columnIndex = c
+                                .getColumnIndex(DownloadManager.COLUMN_STATUS);
+                        if (DownloadManager.STATUS_SUCCESSFUL == c
+                                .getInt(columnIndex)) {
+ 
+                            String uriString = c
+                                    .getString(c
+                                            .getColumnIndex(DownloadManager.COLUMN_LOCAL_URI));
+                        }
+                    }
+                    
+                    String ns = Context.NOTIFICATION_SERVICE;
+                    NotificationManager mNotificationManager = (NotificationManager) getActivity().getSystemService(ns);
+                    
+                    int icon = R.drawable.icon_book_rss;
+                    CharSequence tickerText = "Hello";
+                    long when = System.currentTimeMillis();
+
+                    Notification notification = new Notification(icon, tickerText, when);
+                    
+                    CharSequence contentTitle = "Download Complete";
+                    CharSequence contentText = "Resource Download!";
+                    
+                    Intent notificationIntent = new Intent(DownloadManager.ACTION_VIEW_DOWNLOADS);
+                    notificationIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    //uncomment when better
+//                    Intent notificationIntent = new Intent(getActivity(), MusicActivity.class);
+                    PendingIntent contentIntent = PendingIntent.getActivity(getActivity(), 0, notificationIntent, 0);
+
+                    notification.setLatestEventInfo(context, contentTitle, contentText, contentIntent);
+                    notification.flags |= Notification.FLAG_AUTO_CANCEL;
+                    
+                    int HELLO_ID = 1;
+
+                    mNotificationManager.notify(HELLO_ID, notification);
+                }
+            }
+        };
+ 
+        getActivity().registerReceiver(receiver, new IntentFilter(
+                DownloadManager.ACTION_DOWNLOAD_COMPLETE));
+        
+        
+        
         
     }
 

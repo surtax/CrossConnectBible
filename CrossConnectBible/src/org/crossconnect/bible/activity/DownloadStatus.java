@@ -11,6 +11,7 @@ import org.crosswire.common.util.Reporter;
 import org.crosswire.common.util.ReporterEvent;
 import org.crosswire.common.util.ReporterListener;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -130,7 +131,7 @@ public class DownloadStatus extends ProgressActivityBase {
     	
     	Log.i(TAG, "OK CLICKED");
     	Intent resultIntent = new Intent(this, DownloadStatus.class);
-    	setResult(RequestResultCodes.SUCCESSFUL_DOWNLOAD, resultIntent);
+    	setResult(Activity.RESULT_OK, resultIntent);
     	finish();    
     }
 }

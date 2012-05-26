@@ -338,17 +338,17 @@ public class NotesEditText extends EditText {
         final ActionItem addAction = new ActionItem();
         
         addAction.setTitle("Copy");
-        addAction.setIcon(getResources().getDrawable(R.drawable.kontak));
+        addAction.setIcon(getResources().getDrawable(R.drawable.icon_copy));
 
         final ActionItem accAction = new ActionItem();
         
         accAction.setTitle("Share");
-        accAction.setIcon(getResources().getDrawable(R.drawable.kontak));
+        accAction.setIcon(getResources().getDrawable(R.drawable.ic_menu_share));
         
         final ActionItem upAction = new ActionItem();
         
         upAction.setTitle("Star");
-        upAction.setIcon(getResources().getDrawable(R.drawable.kontak));
+        upAction.setIcon(getResources().getDrawable(R.drawable.icon_support));
 
         
         

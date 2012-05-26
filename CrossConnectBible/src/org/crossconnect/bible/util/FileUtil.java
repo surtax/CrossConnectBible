@@ -54,6 +54,6 @@ public class FileUtil {
 	 * @return
 	 */
 	public static String getFileName(OnlineAudioResource resource, BibleText bibleText) {
-		return bibleText.getBook() + META_SEPERATOR + bibleText.getChapter() + META_SEPERATOR + resource.getResourceRepo().getChurchName() + META_SEPERATOR + resource.getResourceName() + META_SEPERATOR + resource.getResourceVerse() + ".mp3";		
+		return (bibleText.getBook() + META_SEPERATOR + bibleText.getChapter() + META_SEPERATOR + resource.getResourceRepo().getChurchName() + META_SEPERATOR + resource.getResourceName() + META_SEPERATOR + resource.getResourceVerse() + ".mp3").replaceAll(" ", "_");		
 	}
 }

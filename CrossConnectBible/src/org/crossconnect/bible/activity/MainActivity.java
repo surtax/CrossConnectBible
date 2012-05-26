@@ -216,15 +216,15 @@ public class MainActivity extends FragmentActivity {
         settingsAction.setTitle("Settings");
         settingsAction.setIcon(getResources().getDrawable(R.drawable.icon_gear));
 
-        final ActionItem accAction = new ActionItem();
-        
-        accAction.setTitle("Share");
-        accAction.setIcon(getResources().getDrawable(R.drawable.kontak));
-        
-        final ActionItem upAction = new ActionItem();
-        
-        upAction.setTitle("Star");
-        upAction.setIcon(getResources().getDrawable(R.drawable.kontak));
+//        final ActionItem accAction = new ActionItem();
+//        
+//        accAction.setTitle("Share");
+//        accAction.setIcon(getResources().getDrawable(R.drawable.icon_gear));
+//        
+//        final ActionItem upAction = new ActionItem();
+//        
+//        upAction.setTitle("Star");
+//        upAction.setIcon(getResources().getDrawable(R.drawable.icon_support));
 
         
         findViewById(R.id.title_bar_icon).setOnClickListener(new OnClickListener() {
@@ -243,23 +243,23 @@ public class MainActivity extends FragmentActivity {
 		            }
 		        });
 		
-		        accAction.setOnClickListener(new OnClickListener() {
-		            @Override
-		            public void onClick(View v) {
-		                mQuickAction.dismiss();
-		            }
-		        });
-		        
-		        upAction.setOnClickListener(new OnClickListener() {
-		            @Override
-		            public void onClick(View v) {
-		                mQuickAction.dismiss();
-		            }
-		        });
+//		        accAction.setOnClickListener(new OnClickListener() {
+//		            @Override
+//		            public void onClick(View v) {
+//		                mQuickAction.dismiss();
+//		            }
+//		        });
+//		        
+//		        upAction.setOnClickListener(new OnClickListener() {
+//		            @Override
+//		            public void onClick(View v) {
+//		                mQuickAction.dismiss();
+//		            }
+//		        });
 		        
 		        mQuickAction.addActionItem(settingsAction);
-		        mQuickAction.addActionItem(accAction);
-		        mQuickAction.addActionItem(upAction);
+//		        mQuickAction.addActionItem(accAction);
+//		        mQuickAction.addActionItem(upAction);
 		        
 		        mQuickAction.setAnimStyle(QuickActionVertical.ANIM_AUTO);
 		        

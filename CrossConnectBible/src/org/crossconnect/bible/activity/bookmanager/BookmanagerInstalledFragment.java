@@ -324,4 +324,9 @@ public class BookmanagerInstalledFragment extends ListFragment implements Loader
         mAdapter.setData(null);
     }
     
+    public void refresh() {
+        getLoaderManager().restartLoader(0, null, this);
+        mAdapter.notifyDataSetChanged();
+    }
+    
 }

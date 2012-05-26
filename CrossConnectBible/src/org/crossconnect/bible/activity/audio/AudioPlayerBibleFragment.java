@@ -111,23 +111,14 @@ public class AudioPlayerBibleFragment extends ListFragment {
         final ActionItem playAction = new ActionItem();
         
         playAction.setTitle("Play");
-        playAction.setIcon(getResources().getDrawable(R.drawable.kontak));
+        playAction.setIcon(getResources().getDrawable(R.drawable.icon_play));
 
         final ActionItem downloadAction = new ActionItem();
         
         downloadAction.setTitle("Download");
-        downloadAction.setIcon(getResources().getDrawable(R.drawable.kontak));
-        
-        final ActionItem readAction = new ActionItem();
-        
-        readAction.setTitle("Read");
-        readAction.setIcon(getResources().getDrawable(R.drawable.kontak));
-
+        downloadAction.setIcon(getResources().getDrawable(R.drawable.icon_download));
         
         final QuickActionHorizontal mQuickAction  = new QuickActionHorizontal(v);
-        
-        final String text               = "blah";
-        
         
         playAction.setOnClickListener(new OnClickListener() {
             @Override
@@ -151,10 +142,16 @@ public class AudioPlayerBibleFragment extends ListFragment {
         downloadAction.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getActivity(), "Downloading Audio File " + text, Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "Downloading Audio File", Toast.LENGTH_SHORT).show();
                 Log.d(TAG, "Downloading Audio" + mAdapter.getItem(position));
 
                 Request request = new Request(Uri.parse(mAdapter.getItem(position)));
+                
+//        		File path = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PODCASTS) + "/CrossConnectAudio");
+//        		path.mkdir();
+//                
+//                request.setDestinationInExternalPublicDir(Environment.DIRECTORY_PODCASTS, "/CrossConnectAudio/test.mp3");
+
                 ((DownloadManager) getActivity().getSystemService("download")).enqueue(request);
 
                 mQuickAction.dismiss();
@@ -164,16 +161,6 @@ public class AudioPlayerBibleFragment extends ListFragment {
         //Check the links are actually there
         mQuickAction.addActionItem(playAction);
         mQuickAction.addActionItem(downloadAction);
-        if (mAdapter.getItem(position) != null) {
-            readAction.setOnClickListener(new OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Toast.makeText(getActivity(), "Play All " + text, Toast.LENGTH_SHORT).show();
-                    mQuickAction.dismiss();
-                }
-            });
-            mQuickAction.addActionItem(readAction);
-        }
         
         mQuickAction.setAnimStyle(QuickActionVertical.ANIM_AUTO);
         
@@ -185,6 +172,7 @@ public class AudioPlayerBibleFragment extends ListFragment {
         
         mQuickAction.show();
     }
+
     
     private BibleText initialBibleText;
     

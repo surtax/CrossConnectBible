@@ -46,15 +46,15 @@
     </style>
     
     <style name="TitleAppIcon">
-        <item name="android:layout_width">36dp</item>
-        <item name="android:layout_height">36dp</item>
-        <item name ="android:layout_margin">12dp</item>
+        <item name="android:layout_width">32dp</item>
+        <item name="android:layout_height">32dp</item>
+        <item name ="android:layout_margin">8dp</item>
     </style>
 
     <style name="TitleIconBack">
         <item name="android:layout_width">36dp</item>
         <item name="android:layout_height">36dp</item>
-        <item name ="android:layout_marginRight">12dp</item>
+        <item name ="android:layout_marginRight">6dp</item>
     </style>
     
     <style name="HeaderBox">
@@ -65,8 +65,9 @@
     </style>
     
     <style name="TitleIcon">
-        <item name="android:layout_width">36dp</item>
-        <item name="android:layout_height">36dp</item>
+        <item name="android:layout_width">26dp</item>
+        <item name="android:layout_height">26dp</item>
+        <item name ="android:layout_margin">11dp</item>
     </style>
     
     <style name="TitleBar">

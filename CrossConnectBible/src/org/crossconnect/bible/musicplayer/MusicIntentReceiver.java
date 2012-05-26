@@ -24,7 +24,7 @@ import android.widget.Toast;
 /**
  * Receives broadcasted intents. In particular, we are interested in the
  * android.media.AUDIO_BECOMING_NOISY intent, which is broadcast, for example, when the user
- * disconnects the headphones. This class works because we are declaring it in a &lt;receiver&gt;
+ * disconnects the headphones. This class works because we are declaring it in a &lt;org.crossconnect.bible.receiver&gt;
  * tag in AndroidManifest.xml.
  */
 public class MusicIntentReceiver extends BroadcastReceiver {
