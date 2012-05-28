@@ -106,7 +106,7 @@
         </activity>
             
         
-       <activity android:name=".views.PreferencesFromXml" android:theme="@style/LightFullScreen"
+       <activity android:name="org.crossconnect.bible.activity.PreferencesFromXml" android:theme="@style/LightFullScreen"
             android:label="Settings">
         </activity>
         
@@ -116,7 +116,14 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-
+        
+        <activity android:name="org.crossconnect.bible.activity.WelcomeDownloadStatus"  android:theme="@style/Theme.Translucent"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        
         <activity android:name="org.crossconnect.bible.activity.ArticleActivity" android:theme="@style/LightFullScreen"
             android:configChanges="orientation|keyboardHidden">
             <intent-filter>

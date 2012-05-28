@@ -25,12 +25,21 @@
 		android:visibility="invisible"
 		android:layout_below="@id/progressStatusMessage"
 		android:layout_margin="20dip"/>
-	<LinearLayout android:id="@+id/progressControlContainer"
+   	<LinearLayout android:id="@+id/progressControlContainer"
     	android:orientation="vertical"
 	    android:layout_width="fill_parent"
     	android:layout_height="fill_parent"
     	android:layout_margin="20dip"
 		android:layout_below="@id/noTasksRunning">
+   	<TextView android:id="@+id/retry_text"
+		android:text="Download Failed :( Please check your internet connection and try again."
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_height="wrap_content" 
+		android:layout_width="wrap_content"
+		android:visibility="invisible"
+		android:layout_below="@+id/progressControlContainer"
+		android:layout_margin="20dip"/>
+   	    		
     </LinearLayout>
 
 	<!-- Button bar with OK button -->
@@ -45,6 +54,7 @@
 	 		android:text="More"
 			android:onClick="onMore"
 	        android:layout_width="0dip"
+	        android:visibility="invisible"
 	        android:layout_height="wrap_content"
 	        android:layout_weight="1"/>
 

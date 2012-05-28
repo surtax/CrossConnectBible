@@ -41,7 +41,7 @@ public class WelcomeActivity extends FragmentActivity{
     		StrictMode.setThreadPolicy(policy);
         }
 
-        forceBasicFlow = SwordDocumentFacade.getInstance().getBibles().size()==0;
+		forceBasicFlow = SwordDocumentFacade.getInstance().getBibles().size()==0;
 
 	}
 

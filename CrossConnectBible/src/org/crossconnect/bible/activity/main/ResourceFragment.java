@@ -283,13 +283,13 @@ public class ResourceFragment extends ListFragment implements LoaderManager.Load
                     NotificationManager mNotificationManager = (NotificationManager) getActivity().getSystemService(ns);
                     
                     int icon = R.drawable.icon_book_rss;
-                    CharSequence tickerText = "Hello";
+                    CharSequence tickerText = "Resource Download Complete";
                     long when = System.currentTimeMillis();
 
                     Notification notification = new Notification(icon, tickerText, when);
                     
                     CharSequence contentTitle = "Download Complete";
-                    CharSequence contentText = "Resource Download!";
+                    CharSequence contentText = "Click to view downloaded resources";
                     
                     Intent notificationIntent = new Intent(DownloadManager.ACTION_VIEW_DOWNLOADS);
                     notificationIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

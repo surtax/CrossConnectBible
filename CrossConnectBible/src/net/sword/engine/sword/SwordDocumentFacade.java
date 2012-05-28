@@ -34,7 +34,7 @@ public class SwordDocumentFacade {
 	
 	private static final String CROSSWIRE_REPOSITORY = "CrossWire";
 			
-	private static final String DATA_DIRECTORY =  "/mnt/sdcard/Android/data/net.crossconnect/files";
+	private static final String DATA_DIRECTORY =  "/mnt/sdcard/Android/data/org.crossconnect/files";
 	
 //	private static BookFilter SUPPORTED_DOCUMENT_TYPES = new AcceptableBookTypeFilter();
 

@@ -18,11 +18,11 @@
         	<View android:layout_height="fill_parent" android:layout_width="1dp" android:background="@drawable/gradient_black_white_black"/>
             <ImageButton style="@style/TitleIcon" android:background="@drawable/icon_windows" android:id="@+id/menu_button_windows"/>
             <ImageButton style="@style/TitleIcon" android:background="@drawable/ic_launcher" android:id="@+id/menu_button_browse_resources"/>
+            <ImageButton style="@style/TitleIcon" android:background="@drawable/ic_launcher" android:id="@+id/menu_button_audio"/>
             <ImageButton style="@style/TitleIcon" android:background="@drawable/icon_folder" android:id="@+id/menu_button_notes"/>
 	        <View android:layout_height="fill_parent" android:layout_width="1dp" android:background="@drawable/gradient_black_white_black"/>
-            <ImageButton style="@style/TitleIcon" android:background="@drawable/icon_add" android:id="@+id/menu_button_tabs"/>
+            <ImageButton style="@style/TitleIcon" android:background="@drawable/icon_add" android:id="@+id/menu_button_tabs"  android:visibility="gone"/>
             <ImageButton style="@style/TitleIcon" android:background="@drawable/icon_home" android:id="@+id/menu_button_churches"/>
-            <ImageButton style="@style/TitleIcon" android:background="@drawable/ic_launcher" android:id="@+id/menu_button_audio"/>
             <ImageButton style="@style/TitleIcon" android:background="@drawable/icon_pen" android:id="@+id/menu_button_notes_lock"></ImageButton>
         </LinearLayout>
     </LinearLayout>

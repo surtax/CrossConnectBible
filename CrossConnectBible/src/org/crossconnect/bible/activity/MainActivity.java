@@ -122,7 +122,7 @@ public class MainActivity extends FragmentActivity {
 
         
         bible_text_top_icons = new ArrayList<ImageButton>();
-        bible_text_top_icons.add((ImageButton) findViewById(R.id.menu_button_tabs));
+//        bible_text_top_icons.add((ImageButton) findViewById(R.id.menu_button_tabs));
         bible_text_top_icons.add((ImageButton) findViewById(R.id.menu_button_windows));
 
         audio_top_icons = new ArrayList<ImageButton>();
@@ -390,7 +390,7 @@ public class MainActivity extends FragmentActivity {
     private void hideAllIcons() {
         ((ImageButton) findViewById(R.id.menu_button_churches)).setVisibility(View.GONE);
         ((ImageButton) findViewById(R.id.menu_button_browse_resources)).setVisibility(View.GONE);
-        ((ImageButton) findViewById(R.id.menu_button_tabs)).setVisibility(View.GONE);
+//        ((ImageButton) findViewById(R.id.menu_button_tabs)).setVisibility(View.GONE);
         ((ImageButton) findViewById(R.id.menu_button_windows)).setVisibility(View.GONE);
         ((ImageButton) findViewById(R.id.menu_button_audio)).setVisibility(View.GONE);
 //        ((ImageButton) findViewById(R.id.menu_button_browse_audio)).setVisibility(View.GONE);

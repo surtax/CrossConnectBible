@@ -24,6 +24,7 @@ import net.sword.engine.sword.AcceptableBookTypeFilter;
 import net.sword.engine.sword.SwordDocumentFacade;
 
 import org.crossconnect.bible.activity.DownloadStatus;
+import org.crossconnect.bible.activity.WelcomeDownloadStatus;
 import org.crossconnect.bible.service.DownloadManager;
 import org.crossconnect.bible.util.RequestResultCodes;
 import org.crosswire.jsword.book.Book;
@@ -49,9 +50,9 @@ import android.widget.TextView;
 
 import org.crossconnect.bible.R;
 
-public class BookmanagerBibleFragment extends ListFragment implements LoaderManager.LoaderCallbacks<List<Book>> {
+public class WelcomeBookmanagerBibleFragment extends ListFragment implements LoaderManager.LoaderCallbacks<List<Book>> {
 	
-	private static final String TAG = "BookmanagerBibleFragment";
+	private static final String TAG = "WelcomeBookmanagerBibleFragment";
 
 	DownloadManager installService;
 	
@@ -304,10 +305,10 @@ public class BookmanagerBibleFragment extends ListFragment implements LoaderMana
     @Override public void onListItemClick(ListView l, View v, int position, long id) {
 		Log.d("Installer", "Installing " + mAdapter.getItem(position).getInitials());
     	try {
-    		Log.e("BookmanagerBibleFragment", "Starting Download");
+    		Log.e("WelcomeBookmanagerBibleFragment", "Starting Download");
     		// the download happens in another thread
     		SwordDocumentFacade.getInstance().downloadDocument(mAdapter.getItem(position));
-        	startActivityForResult(new Intent(getActivity(), DownloadStatus.class), RequestResultCodes.DOWNLOAD_REQUEST);
+        	startActivityForResult(new Intent(getActivity(), WelcomeDownloadStatus.class), RequestResultCodes.DOWNLOAD_REQUEST);
 
     	} catch (Exception e) {
     		Log.e("BookManagerActivity", "Error on attempt to download", e);
