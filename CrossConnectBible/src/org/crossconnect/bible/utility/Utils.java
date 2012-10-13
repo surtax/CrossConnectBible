@@ -188,7 +188,7 @@ public class Utils {
 				//Else just the chapter reference
 				return ((VerseRange) key).getStart().getBook().getLongName();
 			} else {
-				Log.e("BibleBook is zero", "Should never occur");
+				Log.d("BibleBook is zero", "Should never occur");
 			}
 		} catch (Exception e) {
 		}
@@ -203,7 +203,7 @@ public class Utils {
 				//Else just the chapter reference
 				return ((VerseRange) key).getStart().getBook().getShortName();
 			} else {
-				Log.e("BibleBook is zero", "Should never occur");
+				Log.d("BibleBook is zero", "Should never occur");
 			}
 		} catch (Exception e) {
 		}
@@ -218,7 +218,7 @@ public class Utils {
 			//Else just the chapter reference
 			return ((VerseRange) key).getStart().getChapter();
 		} else {
-			Log.e("Chapter is zero", "Should never occur");
+			Log.d("Chapter is zero", "Should never occur");
 			return 0;
 		}
 	}
@@ -231,7 +231,7 @@ public class Utils {
                 //Else just the chapter reference
                 return ((VerseRange) key).getStart().getLastVerseInBook().getChapter();
             } else {
-                Log.e("BibleBook is zero", "Should never occur");
+                Log.d("BibleBook is zero", "Should never occur");
             }
         } catch (Exception e) {
         }
@@ -319,7 +319,7 @@ public class Utils {
 //     * @return which verse this character belongs to
 //     */
 //    public int getVerseFromCharacterPos(int characterPos) {
-//        Log.e("Selected Char Pos", "CharPos is: " +  characterPos);
+//        Log.d("Selected Char Pos", "CharPos is: " +  characterPos);
 //
 //    	int verse = 0;
 //        
@@ -331,7 +331,7 @@ public class Utils {
 //        while (it.hasNext()) {
 //            Integer currentBoundary = (Integer) it.next();
 //            if (characterPos < currentBoundary) {
-//                Log.e("SelectedVerse", "Verse is: " +  verse);
+//                Log.d("SelectedVerse", "Verse is: " +  verse);
 //                return verse;
 //            } else if (it.hasNext() == false) {
 //                return ++verse;

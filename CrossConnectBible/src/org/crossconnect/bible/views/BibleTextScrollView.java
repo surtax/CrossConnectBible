@@ -24,7 +24,7 @@ public class BibleTextScrollView extends ScrollView {
     protected void onScrollChanged(int x, int y, int oldx, int oldy) {
 		super.onScrollChanged(x, y, oldx, oldy);
 
-//		Log.e("BibleTextScrollView", "Textview Before :" + headTitleTextView.getText());
+//		Log.d("BibleTextScrollView", "Textview Before :" + headTitleTextView.getText());
 
 				
 		final BibleTextView bibleTextView = (BibleTextView) findViewById(R.id.bible_text);
@@ -55,8 +55,8 @@ public class BibleTextScrollView extends ScrollView {
 		msg.setData(bundle);
 		updateTitleHandler.sendMessage(msg);
 		
-//		Log.e("BibleTextScrollView", "onScrollChanged verse number:" + verseText);
-//		Log.e("BibleTextScrollView", "Textview is now :" + headTitleTextView.getText());
+//		Log.d("BibleTextScrollView", "onScrollChanged verse number:" + verseText);
+//		Log.d("BibleTextScrollView", "Textview is now :" + headTitleTextView.getText());
 		
 		
 		

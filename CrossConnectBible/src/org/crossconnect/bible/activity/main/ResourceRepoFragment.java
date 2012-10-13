@@ -132,7 +132,7 @@ public class ResourceRepoFragment extends ListFragment implements
 //						getActivity().startService(i);
 //
 //					} catch (Exception e) {
-//						Log.e("BookManagerActivity",
+//						Log.d("BookManagerActivity",
 //								"Error on attempt to download", e);
 //					}
 //

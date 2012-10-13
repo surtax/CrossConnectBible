@@ -129,7 +129,7 @@ public class ResourceService {
 	 */
 	public boolean isResourceExist(String name, String churchName) {
 		String where = DatabaseHelper.RES_NAME_COL + "='" + name + "' and " + DatabaseHelper.RES_RESOURCEREPO_COL + "= '" + churchName + "'";
-		Log.e("ResourceService", "where:" + where);
+		Log.d("ResourceService", "where:" + where);
 		Cursor cursor = db.query(DatabaseHelper.RES_TABLE_NAME, null, where, null, null, null, null);
 		boolean exists = cursor.moveToNext();
 		if (exists) {

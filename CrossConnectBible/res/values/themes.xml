@@ -2,7 +2,8 @@
 <!-- 
 Themes for the app
  -->
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
     <style name="LightFullScreen" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:windowAnimationStyle">@null</item>"
     </style>
 </resources>

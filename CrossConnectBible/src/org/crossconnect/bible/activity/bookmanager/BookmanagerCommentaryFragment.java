@@ -89,7 +89,7 @@ public class BookmanagerCommentaryFragment extends ListFragment implements Loade
             DownloadManager installService = new DownloadManager();
 
       			try {
-      				Log.e("BookManager", "Getting avialable books");
+      				Log.d("BookManager", "Getting avialable books");
       				List<Book > availableBooks= installService.getDownloadableBooks(SUPPORTED_DOCUMENT_TYPES, CROSSWIRE_REPOSITORY, false);
 	      			List<Book> installedBooks = SwordDocumentFacade.getInstance().getDocuments();
 	      			allBooks.addAll(availableBooks);
@@ -284,7 +284,7 @@ public class BookmanagerCommentaryFragment extends ListFragment implements Loade
     @Override public void onListItemClick(ListView l, View v, int position, long id) {
         // Insert desired behavior here.
 
-//				Log.e("BookManager", "Click");
+//				Log.d("BookManager", "Click");
 //				Intent i = new Intent ();
 //				i.putExtra("Translation", ((TextView) view).getText());
 //				setResult(RESULT_OK, i);
@@ -298,7 +298,7 @@ public class BookmanagerCommentaryFragment extends ListFragment implements Loade
 //				try {
 //				crossWireInstaller.install(availableBooks.get(position));
 //			} catch (InstallException e) {
-//				Log.e("BookManager", "Install Book", e);
+//				Log.d("BookManager", "Install Book", e);
 //			}
 //
 //			}
@@ -306,7 +306,7 @@ public class BookmanagerCommentaryFragment extends ListFragment implements Loade
 //      });
 //      
 //			} catch (InstallException e) {
-//				Log.e("BookManager", "Get avialable books", e);
+//				Log.d("BookManager", "Get avialable books", e);
 //			}
 //
     	
@@ -342,7 +342,7 @@ public class BookmanagerCommentaryFragment extends ListFragment implements Loade
 	private void doDownload(Book document) {
 
     	try {
-    		Log.e("BookmanagerCommentaryFragment", "Starting Download");
+    		Log.d("BookmanagerCommentaryFragment", "Starting Download");
     		// the download happens in another thread
     		SwordDocumentFacade.getInstance().downloadDocument(document);
 	    	
@@ -358,7 +358,7 @@ public class BookmanagerCommentaryFragment extends ListFragment implements Loade
         	startActivityForResult(intent, 1);
 
     	} catch (Exception e) {
-    		Log.e("BookManagerActivity", "Error on attempt to download", e);
+    		Log.d("BookManagerActivity", "Error on attempt to download", e);
     	}
 
 	}

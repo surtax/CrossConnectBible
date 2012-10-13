@@ -86,7 +86,7 @@ public class BookmanagerInstalledFragment extends ListFragment implements Loader
         	List<Book> allBooks = new ArrayList<Book>();
 
       			try {
-      				Log.e("BookManager", "Getting Installed books");
+      				Log.d("BookManager", "Getting Installed books");
 	      			allBooks = SwordDocumentFacade.getInstance().getDocuments();
 	      			Collections.sort(allBooks);
       			} catch (Exception e) {
@@ -269,7 +269,7 @@ public class BookmanagerInstalledFragment extends ListFragment implements Loader
     @Override public void onListItemClick(ListView l, View v, int position, long id) {
         // Insert desired behavior here.
 
-				Log.e(TAG, "Click");
+				Log.d(TAG, "Click");
 				Intent i = new Intent ();
 				i.putExtra("Translation", mAdapter.getItem(position).getInitials());
 				getActivity().setResult(Activity.RESULT_OK, i);
@@ -283,7 +283,7 @@ public class BookmanagerInstalledFragment extends ListFragment implements Loader
 //				try {
 //				crossWireInstaller.install(availableBooks.get(position));
 //			} catch (InstallException e) {
-//				Log.e("BookManager", "Install Book", e);
+//				Log.d("BookManager", "Install Book", e);
 //			}
 //
 //			}
@@ -291,7 +291,7 @@ public class BookmanagerInstalledFragment extends ListFragment implements Loader
 //      });
 //      
 //			} catch (InstallException e) {
-//				Log.e("BookManager", "Get avialable books", e);
+//				Log.d("BookManager", "Get avialable books", e);
 //			}
 //
     	

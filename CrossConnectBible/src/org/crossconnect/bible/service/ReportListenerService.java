@@ -67,7 +67,7 @@ public class ReportListenerService {
 //					msg = "Doh! Something's gone wrong, sorry about this :(";
 //				}
 				
-				Log.e("Install Reporter", msg);
+				Log.d("Install Reporter", msg);
 			
 
 //			    	new AlertDialog.Builder(context)

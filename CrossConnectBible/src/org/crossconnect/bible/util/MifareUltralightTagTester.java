@@ -34,12 +34,12 @@ public class MifareUltralightTagTester {
         		}
         	}
         } catch (IOException e) {
-            Log.e(TAG, "IOException while closing MifareUltralight...", e);
+            Log.d(TAG, "IOException while closing MifareUltralight...", e);
         } finally {
             try {
                 ultralight.close();
             } catch (IOException e) {
-                Log.e(TAG, "IOException while closing MifareUltralight...", e);
+                Log.d(TAG, "IOException while closing MifareUltralight...", e);
             }
         }
     }
@@ -52,14 +52,14 @@ public class MifareUltralightTagTester {
             Log.d(TAG, "NFC Read:" + new String(payload, Charset.forName("US-ASCII")));
             return new String(payload, Charset.forName("US-ASCII"));
         } catch (IOException e) {
-            Log.e(TAG, "IOException while writing MifareUltralight message...", e);
+            Log.d(TAG, "IOException while writing MifareUltralight message...", e);
         } finally {
             if (mifare != null) {
                try {
                    mifare.close();
                }
                catch (IOException e) {
-                   Log.e(TAG, "Error closing tag...", e);
+                   Log.d(TAG, "Error closing tag...", e);
                }
             }
         }
@@ -106,12 +106,12 @@ public class MifareUltralightTagTester {
             Log.d(TAG, "NFC Write:" + bibleText.getTranslation().getInitials());
             
         } catch (IOException e) {
-            Log.e(TAG, "IOException while closing MifareUltralight...", e);
+            Log.d(TAG, "IOException while closing MifareUltralight...", e);
         } finally {
             try {
                 ultralight.close();
             } catch (IOException e) {
-                Log.e(TAG, "IOException while closing MifareUltralight...", e);
+                Log.d(TAG, "IOException while closing MifareUltralight...", e);
             }
         }
     }
@@ -143,14 +143,14 @@ public class MifareUltralightTagTester {
             return new SwordBibleText(book, chapterBytes.intValue(), verseBytes.intValue(), translation);
             
         } catch (IOException e) {
-            Log.e(TAG, "IOException while writing MifareUltralight message...", e);
+            Log.d(TAG, "IOException while writing MifareUltralight message...", e);
         } finally {
             if (mifare != null) {
                try {
                    mifare.close();
                }
                catch (IOException e) {
-                   Log.e(TAG, "Error closing tag...", e);
+                   Log.d(TAG, "Error closing tag...", e);
                }
             }
         }

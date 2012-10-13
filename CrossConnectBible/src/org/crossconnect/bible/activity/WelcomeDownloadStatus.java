@@ -58,7 +58,7 @@ public class WelcomeDownloadStatus extends ProgressActivityBase {
 					msg = "Doh! Something's gone wrong, sorry about this :(";
 				}
 				
-				Log.e("DownloadStatus", msg);
+				Log.d("DownloadStatus", msg);
 
 			}
         });

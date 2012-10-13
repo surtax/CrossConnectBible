@@ -108,7 +108,7 @@ public class SwordBibleText implements BibleText, Parcelable {
 			try{
 				int verseToPreview = Utils.getVerse(key);
 
-				Log.e("SwordBibleText", key.toString() + " Verse to preview " + verseToPreview);
+				Log.d("SwordBibleText", key.toString() + " Verse to preview " + verseToPreview);
 				//TODO: need to limit the number of chars returned
 				preview = spannableStringBuilder.subSequence(boundaries.get(verseToPreview-1), boundaries.get(verseToPreview));
 			} catch (Exception e) {
@@ -196,7 +196,7 @@ public class SwordBibleText implements BibleText, Parcelable {
 	 */
 	@Override
 	public int getVerseFromCharPos(int characterPos) {
-		Log.e("SwordBibleText", "GetVerseFrom CharPos: " + characterPos);
+		Log.d("SwordBibleText", "GetVerseFrom CharPos: " + characterPos);
 
 		int verse = 0;
 
@@ -207,7 +207,7 @@ public class SwordBibleText implements BibleText, Parcelable {
 		while (it.hasNext()) {
 			Integer currentBoundary = (Integer) it.next();
 			if (characterPos < currentBoundary) {
-				Log.e("SwordBibleText", "SelectedVerse is: " + verse);
+				Log.d("SwordBibleText", "SelectedVerse is: " + verse);
 				return verse;
 			} else if (it.hasNext() == false) {
 				if (currentBoundary == characterPos) {
@@ -224,14 +224,14 @@ public class SwordBibleText implements BibleText, Parcelable {
 
 	@Override
 	public int getCharPosStartFromVerse(int verseQuery) {
-		Log.e("CharPosStartFromVerse", "verseQuery:" + verseQuery);
-		Log.e("CharPosStartFromVerse", " return:" + boundaries.get(verseQuery - 1));
+		Log.d("CharPosStartFromVerse", "verseQuery:" + verseQuery);
+		Log.d("CharPosStartFromVerse", " return:" + boundaries.get(verseQuery - 1));
 		return boundaries.get(verseQuery - 1);
 	}
 
 	@Override
 	public int getCharPosEndFromVerse(int verseQuery) {
-		Log.e("CharPosEndFromVerse", "verse:" + verseQuery + 1 + " return:"
+		Log.d("CharPosEndFromVerse", "verse:" + verseQuery + 1 + " return:"
 				+ boundaries.get(verseQuery));
 		return boundaries.get(verseQuery);
 	}

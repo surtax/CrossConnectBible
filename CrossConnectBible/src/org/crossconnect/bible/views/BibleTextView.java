@@ -61,10 +61,10 @@ public class BibleTextView extends TextView{
         accAction.setTitle("Share");
         accAction.setIcon(getResources().getDrawable(R.drawable.ic_menu_share));
         
-        final ActionItem upAction = new ActionItem();
-        
-        upAction.setTitle("Star");
-        upAction.setIcon(getResources().getDrawable(R.drawable.icon_support));
+//        final ActionItem upAction = new ActionItem();
+//        
+//        upAction.setTitle("Star");
+//        upAction.setIcon(getResources().getDrawable(R.drawable.icon_support));
 
         
         
@@ -117,18 +117,18 @@ public class BibleTextView extends TextView{
                     }
                 });
                 
-                upAction.setOnClickListener(new OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Toast.makeText(ctx, "Upload " + text, Toast.LENGTH_SHORT).show();
-                        
-                        mQuickAction.dismiss();
-                    }
-                });
+//                upAction.setOnClickListener(new OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        Toast.makeText(ctx, "Upload " + text, Toast.LENGTH_SHORT).show();
+//                        
+//                        mQuickAction.dismiss();
+//                    }
+//                });
                 
                 mQuickAction.addActionItem(addAction);
                 mQuickAction.addActionItem(accAction);
-                mQuickAction.addActionItem(upAction);
+//                mQuickAction.addActionItem(upAction);
                 
                 mQuickAction.setAnimStyle(QuickActionVertical.ANIM_AUTO);
                 
@@ -183,7 +183,7 @@ public class BibleTextView extends TextView{
      */
     public void selectVerse(int characterNumber, int currentStart, int currentEnd) {
         
-    	Log.e(TAG, "SelectVerse: From charpos to verse org.crossconnect.bible.utility" + bibleText.getVerseFromCharPos(this.getSelectionStart()));
+    	Log.d(TAG, "SelectVerse: From charpos to verse org.crossconnect.bible.utility" + bibleText.getVerseFromCharPos(this.getSelectionStart()));
 
         
     	int newSelection = bibleText.getVerseFromCharPos(this.getSelectionStart());
@@ -197,7 +197,7 @@ public class BibleTextView extends TextView{
     		currentEnd = currentEnd -1;
     	}
     	int currentEndSelected = bibleText.getVerseFromCharPos(currentEnd);
-    	Log.e("SelectVerse", "Current Start and End" + currentStartSelected + " " + currentEndSelected);
+    	Log.d("SelectVerse", "Current Start and End" + currentStartSelected + " " + currentEndSelected);
     	
     	if (currentStart <= 0) {
     		currentStart = 0;

@@ -244,8 +244,8 @@ public class WindowsActivity extends Activity implements TabContentFactory {
 //        	
 //        }
 //        
-//        Log.e("WindowsActivity", "DM WidthPixel: " + dm.widthPixels);
-//        Log.e("WindowsActivity", "From java code WidthPixel: " + v.getWidth());
+//        Log.d("WindowsActivity", "DM WidthPixel: " + dm.widthPixels);
+//        Log.d("WindowsActivity", "From java code WidthPixel: " + v.getWidth());
 //        
 //
 //        
@@ -309,7 +309,7 @@ public class WindowsActivity extends Activity implements TabContentFactory {
             		return i;
             	}
         	}
-        	Log.e("WindowsActivity", "Window item does not exist");
+        	Log.d("WindowsActivity", "Window item does not exist");
         	return -1;
         }
 

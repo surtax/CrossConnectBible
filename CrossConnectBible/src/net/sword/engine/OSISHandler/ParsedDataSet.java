@@ -168,8 +168,8 @@ public class ParsedDataSet {
 		
 		//Add a space after the verse number
 		num = num + " ";
-		//Log.e("setVerseNum", "boundary added in: " +  sb.length());
-		//Log.e("setVerseNum", num + "sb: " + sb.length());
+		//Log.d("setVerseNum", "boundary added in: " +  sb.length());
+		//Log.d("setVerseNum", num + "sb: " + sb.length());
 		if (num != null) {
 			if (sb.length() == 0) {
 				sb.append(num);
@@ -230,7 +230,7 @@ public class ParsedDataSet {
 //	 * @param num
 //	 */
 //	public void setSwordVerse(String verse, String num) {
-//		//Log.e("SetSwordVerse", verse);
+//		//Log.d("SetSwordVerse", verse);
 //		if (verse != null && num != null) {
 //			if(verse.length() > 0 && verse.charAt(0) == '\n'){
 //				sb.append('\n');
@@ -249,12 +249,12 @@ public class ParsedDataSet {
 	}
 
 	public void verseNewline() {
-//		Log.e("ParsedDataSet", "new line called");
+//		Log.d("ParsedDataSet", "new line called");
 		sb.append('\n');
 	}
 
 	public void verseBR() {
-//		Log.e("ParsedDataSet", "new line called");
+//		Log.d("ParsedDataSet", "new line called");
 		sb.append(' ');
 	}
 

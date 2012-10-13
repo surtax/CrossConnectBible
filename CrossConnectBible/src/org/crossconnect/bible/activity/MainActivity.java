@@ -112,6 +112,7 @@ public class MainActivity extends FragmentActivity {
         mTabHost.getTabWidget().setDividerDrawable(R.drawable.tab_divider);
 
         mViewPager = (ViewPager) findViewById(R.id.pager);
+        mViewPager.setOffscreenPageLimit(3);
         mTabsAdapter = new TabsAdapter(this, mTabHost, mViewPager);
         
         

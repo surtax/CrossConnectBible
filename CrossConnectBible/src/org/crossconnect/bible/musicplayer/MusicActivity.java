@@ -269,7 +269,7 @@ public class MusicActivity extends FragmentActivity implements OnClickListener {
         @Override
         public void onServiceConnected(ComponentName className,
                 IBinder service) {
-        	Log.e("ServiceConnection", "BOUND SERVICE!");
+        	Log.d("ServiceConnection", "BOUND SERVICE!");
             LocalBinder binder = (LocalBinder) service;
             mService = binder.getService();
             mBound = true;
@@ -314,11 +314,11 @@ public class MusicActivity extends FragmentActivity implements OnClickListener {
 
 			@Override
 			public void run() {
-//		    	Log.e("MainActivity", "RUN JOB!");
+//		    	Log.d("MainActivity", "RUN JOB!");
 				if (mBound){
 					int duration = (int) Math.round(((double) mService.getDuration()) / 1000);
 					int curPosition = (int) Math.round(((double) mService.getCurrentPosition()) / 1000);;
-//					Log.e("RefreshTimer", "Duration: " + duration + " CurrentPosition:" + curPosition);
+//					Log.d("RefreshTimer", "Duration: " + duration + " CurrentPosition:" + curPosition);
 					
 					
 					if (duration != 0 && curPosition != 0) {
@@ -330,7 +330,7 @@ public class MusicActivity extends FragmentActivity implements OnClickListener {
 					} else {
 						
 						//TODO: probably should just make it so that stop and start works rather than change this
-//						Log.e("MainActivity", "Duration fail");
+//						Log.d("MainActivity", "Duration fail");
 //						mTitleText.setText("");
 					}
 					
@@ -359,7 +359,7 @@ public class MusicActivity extends FragmentActivity implements OnClickListener {
 
 		public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
 			if (fromUser == true) {
-				Log.e("MainActivity", "Progress:" + progress);
+				Log.d("MainActivity", "Progress:" + progress);
 				mService.seekTo(BigInteger.valueOf(mService.getDuration()).multiply(BigInteger.valueOf(progress)).divide(BigInteger.valueOf(seekBar.getMax())).intValue());
 			}
 		}

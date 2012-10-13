@@ -215,7 +215,7 @@ public class ResourceFragment extends ListFragment implements LoaderManager.Load
                         getActivity().startService(i);
 
                     } catch (Exception e) {
-                        Log.e("BookManagerActivity", "Error on attempt to download", e);
+                        Log.d("BookManagerActivity", "Error on attempt to download", e);
                     }
 
                     mQuickAction.dismiss();

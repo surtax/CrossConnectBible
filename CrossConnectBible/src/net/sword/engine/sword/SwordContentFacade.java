@@ -121,12 +121,12 @@ public class SwordContentFacade {
 			BookData data = new BookData(book, key);		
 			SAXEventProvider osissep = data.getSAXEventProvider();
 			if (osissep == null) {
-				Log.e(TAG, "No osis SEP returned");
+				Log.d(TAG, "No osis SEP returned");
 			} else {
 
 				osissep.provideSAXEvents(xmlhandler);
 				
-//				Log.e("xmlhandler text", xmlhandler.toString());
+//				Log.d("xmlhandler text", xmlhandler.toString());
 			}
 	        return xmlhandler.getParsedData();
 		} catch (Exception e) {
@@ -220,7 +220,7 @@ public class SwordContentFacade {
 //		
 //			return osisHandler.toString();
 //    	} catch (Exception e) {
-//    		Log.e(TAG, "Error getting text from book" , e);
+//    		Log.d(TAG, "Error getting text from book" , e);
 //    		return BibleApplication.getApplication().getString(R.string.error_occurred);
 //    	}
 //    }
@@ -257,7 +257,7 @@ public class SwordContentFacade {
 //		        plainText = OSISUtil.getCanonicalText(data.getOsisFragment());
 //    		}
 //    	} catch (Exception e) {
-//    		Log.e(TAG, "Error getting plain text", e);
+//    		Log.d(TAG, "Error getting plain text", e);
 //    	}
 //    	return plainText;
 //    }

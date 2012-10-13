@@ -140,7 +140,7 @@ public class BookManagerActivity extends FragmentActivity {
             	mViewPager.setCurrentItem(0);
     	    	
     		} else {
-    	    	Log.e("BookManagerActivity", "Unssucessful Download");
+    	    	Log.d("BookManagerActivity", "Unssucessful Download");
     		}
     	}
 

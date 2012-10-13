@@ -158,7 +158,7 @@ public class QuickActionHorizontal extends CustomPopupWindow {
         int yPos            = anchorRect.top - rootHeight;
 
         boolean onTop       = true;
-        Log.e("OriginalShowXYSize", "Rootheight:" + rootHeight + " Top:" + top + " Location[]:" + location[0] + ":" + location[1]);
+        Log.d("OriginalShowXYSize", "Rootheight:" + rootHeight + " Top:" + top + " Location[]:" + location[0] + ":" + location[1]);
         // display on bottom
         if (location[1] < rootHeight ) {
             yPos    = anchorRect.bottom;
@@ -182,8 +182,8 @@ public class QuickActionHorizontal extends CustomPopupWindow {
 	 * @param location
 	 */
     public void showXYSize(int[] location, int height, int width, int top) {
-		Log.e("QuickActionHorizontal", "showing at:" + "location " + location[0] + ":" + location[1]);
-		Log.e("QuickActionHorizontal", "height:" + height + " width:" + width + " top:" + top);
+		Log.d("QuickActionHorizontal", "showing at:" + "location " + location[0] + ":" + location[1]);
+		Log.d("QuickActionHorizontal", "height:" + height + " width:" + width + " top:" + top);
 
     	preShow();
     	

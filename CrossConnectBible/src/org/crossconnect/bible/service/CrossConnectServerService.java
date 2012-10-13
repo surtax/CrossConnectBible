@@ -55,7 +55,7 @@ public class CrossConnectServerService {
 			}
 		} catch (Exception e) {
 			// TODO:need to exception handle here
-			Log.e("CrossConnectServer","JSON Exception", e);
+			Log.d("CrossConnectServer","JSON Exception", e);
 		}
 
 		return audios;
@@ -86,10 +86,10 @@ public class CrossConnectServerService {
 				sb.append(inputLine);
 			in.close();
 		} catch (UnknownHostException e) {
-			Log.e("CrossConnectServer","Invalid URL or No Internet", e);
+			Log.d("CrossConnectServer","Invalid URL or No Internet", e);
 			throw e;
 		} catch (Exception e) {
-			Log.e("CrossConnectServer","Connection Issue", e);
+			Log.d("CrossConnectServer","Connection Issue", e);
 		}
 		return sb.toString();
 

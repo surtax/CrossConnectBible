@@ -89,7 +89,7 @@ public class SwordDocumentFacade {
 			
 //				log.debug(("Sword paths:"+getPaths()));
 		} catch (Exception e) {
-			Log.e(TAG, "Initialisation failed", e);
+			Log.d(TAG, "Initialisation failed", e);
 		}
 	}
 
@@ -194,7 +194,7 @@ public class SwordDocumentFacade {
 //		try {
 //			source = new URI("http://www.crosswire.org/and-bible/fonts/v1/"+font);
 //		} catch (URISyntaxException use) {
-//    		Log.e(TAG, "Invalid URI", use);
+//    		Log.d(TAG, "Invalid URI", use);
 //    		throw new InstallException("Error downloading font");
 //		}
 //		File target = new File(SharedConstants.FONT_DIR, font);
@@ -300,9 +300,9 @@ public class SwordDocumentFacade {
 			try {
 				downloadManager.installBook(repo, document);
 			} catch (BookException e) {
-				Log.e(TAG, "downloadDOcumentException", e);
+				Log.d(TAG, "downloadDOcumentException", e);
 			} catch (InstallException e) {
-				Log.e(TAG, "downloadDOcumentException", e);
+				Log.d(TAG, "downloadDOcumentException", e);
 			}
 		}
 

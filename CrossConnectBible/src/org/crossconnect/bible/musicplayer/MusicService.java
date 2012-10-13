@@ -388,7 +388,7 @@ public class MusicService extends Service implements OnCompletionListener, OnPre
                 // set the source of the media player a a content URI
                 createMediaPlayerIfNeeded();
                 mPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
-                Log.e("MusicService", "Audio URI:" + item.getURI());
+                Log.d("MusicService", "Audio URI:" + item.getURI());
                 mPlayer.setDataSource(getApplicationContext(), item.getURI());
                 mSongTitle = item.getTitle();
             }
@@ -411,7 +411,7 @@ public class MusicService extends Service implements OnCompletionListener, OnPre
             else if (mWifiLock.isHeld()) mWifiLock.release();
         }
         catch (IOException ex) {
-            Log.e("MusicService", "IOException playing next song: " + ex.getMessage());
+            Log.d("MusicService", "IOException playing next song: " + ex.getMessage());
             ex.printStackTrace();
         }
     }
@@ -467,7 +467,7 @@ public class MusicService extends Service implements OnCompletionListener, OnPre
     public boolean onError(MediaPlayer mp, int what, int extra) {
         Toast.makeText(getApplicationContext(), "Media player error! Resetting.",
             Toast.LENGTH_SHORT).show();
-        Log.e(TAG, "Error: what=" + String.valueOf(what) + ", extra=" + String.valueOf(extra));
+        Log.d(TAG, "Error: what=" + String.valueOf(what) + ", extra=" + String.valueOf(extra));
 
         mState = State.Stopped;
         relaxResources(true);

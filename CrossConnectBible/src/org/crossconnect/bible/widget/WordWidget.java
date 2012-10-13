@@ -68,7 +68,7 @@ public class WordWidget extends AppWidgetProvider {
 				widgetText = bibleText.getSpannableStringBuilder();
 				widgetTitle = bibleText.getReferenceBookChapterVerse();
 			} catch (Exception e) {
-				Log.e("WordWidget", "Couldn't contact API", e);
+				Log.d("WordWidget", "Couldn't contact API", e);
 				widgetText = null;
 			}
 

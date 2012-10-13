@@ -62,12 +62,12 @@ public class MusicRetriever {
 
         if (cur == null) {
             // Query failed...
-            Log.e(TAG, "Failed to retrieve music: cursor is null :-(");
+            Log.d(TAG, "Failed to retrieve music: cursor is null :-(");
             return;
         }
         if (!cur.moveToFirst()) {
             // Nothing to query. There is no music on the device. How boring.
-            Log.e(TAG, "Failed to move cursor to first row (no query results).");
+            Log.d(TAG, "Failed to move cursor to first row (no query results).");
             return;
         }
 

@@ -207,7 +207,7 @@ public class NotesEditText extends EditText {
     	Pattern rangePattern = Pattern.compile(bookChapterVerseRangeRegex);
     	Matcher m = rangePattern.matcher(getText());
     	while(m.find()) {
-    		Log.e("Found", m.group());
+    		Log.d("Found", m.group());
     		sb.setSpan(new InternalURLSpan(referenceClickListener),m.start(),m.end(),Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
     	}
     	
@@ -215,21 +215,21 @@ public class NotesEditText extends EditText {
     	Pattern bookChapterVerseRegexpattern = Pattern.compile(bookChapterVerseRegex);
     	m = bookChapterVerseRegexpattern.matcher(getText());
     	while(m.find()) {
-    		Log.e("Found", m.group());
+    		Log.d("Found", m.group());
     		sb.setSpan(new InternalURLSpan(referenceClickListener),m.start(),m.end(),Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
     	}
 
     	Pattern bookChapterRegexPattern = Pattern.compile(bookChapterRegex);
     	m = bookChapterRegexPattern.matcher(getText());
     	while(m.find()) {
-    		Log.e("Found", m.group());
+    		Log.d("Found", m.group());
     		sb.setSpan(new InternalURLSpan(referenceClickListener),m.start(),m.end(),Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
     	}
     	
     	Pattern labelsRegexPattern = Pattern.compile(labelsRegex);
     	m = labelsRegexPattern.matcher(getText());
     	while(m.find()) {
-    		Log.e("Found", m.group());
+    		Log.d("Found", m.group());
     		sb.setSpan(new InternalURLSpan(referenceClickListener),m.start(),m.end(),Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
     	}
     	

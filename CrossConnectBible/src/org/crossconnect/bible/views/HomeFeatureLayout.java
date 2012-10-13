@@ -222,7 +222,7 @@ public class HomeFeatureLayout extends HorizontalScrollView {
                     return true;
                 }
             } catch (Exception e) {
-//                Log.e("HomeFeature", "There was an error processing the Fling event:" + e.getMessage());
+//                Log.d("HomeFeature", "There was an error processing the Fling event:" + e.getMessage());
             }
             return false;
         }
@@ -244,10 +244,10 @@ public class HomeFeatureLayout extends HorizontalScrollView {
         //Make slight horizontal views on scrolling smoother - also ignores if it has been press and held for more 100 ms (usually scrolling)
         if (verticalScrollGestureDetector.onTouchEvent(ev) || (ev.getEventTime() - ev.getDownTime() > 100)) {
             //If it is mainly a vertical scrolling the homescreen event should ignore it and let the lists deal with it
-//            Log.e("Home-OnIntercept", "Ignored");
+//            Log.d("Home-OnIntercept", "Ignored");
             return false;
         } else {
-//        	Log.e("Home-OnIntercept", "HomeFeature intecepts");
+//        	Log.d("Home-OnIntercept", "HomeFeature intecepts");
             //If it is mainly a horizontal scroll view then let the homescreen deal with it
             return super.onInterceptTouchEvent(ev);
         }

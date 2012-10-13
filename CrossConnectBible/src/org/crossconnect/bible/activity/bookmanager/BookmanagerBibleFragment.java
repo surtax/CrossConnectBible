@@ -93,7 +93,7 @@ public class BookmanagerBibleFragment extends ListFragment implements LoaderMana
             DownloadManager installService = new DownloadManager();
 
       			try {
-      				Log.e("BookManager", "Getting avialable books");
+      				Log.d("BookManager", "Getting avialable books");
       				List<Book > availableBooks= installService.getDownloadableBooks(SUPPORTED_DOCUMENT_TYPES, CROSSWIRE_REPOSITORY, false);
 	      			List<Book> installedBooks = SwordDocumentFacade.getInstance().getDocuments();
 	      			installableBooks.addAll(availableBooks);
@@ -304,13 +304,13 @@ public class BookmanagerBibleFragment extends ListFragment implements LoaderMana
     @Override public void onListItemClick(ListView l, View v, int position, long id) {
 		Log.d("Installer", "Installing " + mAdapter.getItem(position).getInitials());
     	try {
-    		Log.e("BookmanagerBibleFragment", "Starting Download");
+    		Log.d("BookmanagerBibleFragment", "Starting Download");
     		// the download happens in another thread
     		SwordDocumentFacade.getInstance().downloadDocument(mAdapter.getItem(position));
         	startActivityForResult(new Intent(getActivity(), DownloadStatus.class), RequestResultCodes.DOWNLOAD_REQUEST);
 
     	} catch (Exception e) {
-    		Log.e("BookManagerActivity", "Error on attempt to download", e);
+    		Log.d("BookManagerActivity", "Error on attempt to download", e);
     	}
 
     }

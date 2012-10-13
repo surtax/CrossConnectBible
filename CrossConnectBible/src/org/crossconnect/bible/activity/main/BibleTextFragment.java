@@ -230,7 +230,7 @@ public class BibleTextFragment extends Fragment implements LoaderManager.LoaderC
 //            this.setTypeface(Typeface.createFromAsset(ctx.getAssets(), "fonts/" + "Ubuntu-B.ttf"), Typeface.BOLD);
         } catch (Exception e) {
         	//Custom font not found
-            Log.e(TAG,"Font not found!",e);
+            Log.d(TAG,"Font not found!",e);
         }
 
 		

@@ -94,7 +94,7 @@ public class WelcomeBookmanagerBibleFragment extends ListFragment implements Loa
             DownloadManager installService = new DownloadManager();
 
       			try {
-      				Log.e("BookManager", "Getting avialable books");
+      				Log.d("BookManager", "Getting avialable books");
       				List<Book > availableBooks= installService.getDownloadableBooks(SUPPORTED_DOCUMENT_TYPES, CROSSWIRE_REPOSITORY, false);
 	      			List<Book> installedBooks = SwordDocumentFacade.getInstance().getDocuments();
 	      			installableBooks.addAll(availableBooks);
@@ -305,13 +305,13 @@ public class WelcomeBookmanagerBibleFragment extends ListFragment implements Loa
     @Override public void onListItemClick(ListView l, View v, int position, long id) {
 		Log.d("Installer", "Installing " + mAdapter.getItem(position).getInitials());
     	try {
-    		Log.e("WelcomeBookmanagerBibleFragment", "Starting Download");
+    		Log.d("WelcomeBookmanagerBibleFragment", "Starting Download");
     		// the download happens in another thread
     		SwordDocumentFacade.getInstance().downloadDocument(mAdapter.getItem(position));
         	startActivityForResult(new Intent(getActivity(), WelcomeDownloadStatus.class), RequestResultCodes.DOWNLOAD_REQUEST);
 
     	} catch (Exception e) {
-    		Log.e("BookManagerActivity", "Error on attempt to download", e);
+    		Log.d("BookManagerActivity", "Error on attempt to download", e);
     	}
 
     }

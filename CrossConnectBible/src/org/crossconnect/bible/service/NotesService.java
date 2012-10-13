@@ -103,7 +103,7 @@ public class NotesService {
 			int rowId = (int) db.insert(DatabaseHelper.NOTES_TABLE_NAME, null, values);
 			return rowId;
 		}
-		Log.e(TAG, "PERSONAL NOTE INSERT FAILED!");
+		Log.d(TAG, "PERSONAL NOTE INSERT FAILED!");
 		return -1;
 	}
 
